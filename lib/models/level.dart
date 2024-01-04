@@ -12,7 +12,7 @@ class Level{
     Level(svgImage: "assets/svg/undraw_sharing_knowledge.svg" , level: "Third Year"),
     Level(svgImage: "assets/svg/undraw_programmer.svg", level: "Penultimate Year"),
     Level(svgImage: "assets/svg/undraw_agree.svg", level: "Final Year"),
-    Level(svgImage: "assets/svg/undraw_book_lover.svg", level: "Syllabus"),
+    Level(svgImage: "assets/svg/undraw_book_lover.svg", level: "Curriculum"),
   ];
   
 }

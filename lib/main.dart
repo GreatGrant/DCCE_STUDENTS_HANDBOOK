@@ -38,6 +38,23 @@ class HomePage extends StatelessWidget {
         ),
       ),
         centerTitle: false,
+        actions: [
+          IconButton(
+              onPressed: (){},
+              icon: const Icon(Icons.shield_moon)
+          ),
+          PopupMenuButton(
+            onSelected: (value){
+
+            },
+              itemBuilder: (BuildContext context){
+                return [
+                  const PopupMenuItem(
+                      child: Text("About")
+                  )
+                ];
+              }),
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -48,7 +65,7 @@ class HomePage extends StatelessWidget {
             Text("Academic Levels",
             style: Theme.of(context).textTheme.headlineLarge,),
             const SizedBox(height: 8,),
-            Text("Select A Level Applicable To You From Below",
+            Text("Select A Level Below To See Its Syllabus",
             style: Theme.of(context).textTheme.bodyMedium),
             const SizedBox(height: 8,),
             Expanded(
