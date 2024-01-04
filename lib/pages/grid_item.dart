@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import '../models/level.dart';
 
@@ -13,9 +14,13 @@ Widget buildGridItem(Level level) {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Icon(level.icon),
+            Text(level.level),
             const SizedBox(height: 8),
-            Text(level.level)
+            SvgPicture.asset(
+              level.icon,
+              width: 60,
+              height: 60,
+            ),
             ],
           ),
         ),
