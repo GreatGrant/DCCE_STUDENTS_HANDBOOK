@@ -19,6 +19,7 @@ Widget buildGridItem(Level level) {
               level.level,
               style: const TextStyle(
                 color: Colors.white,
+                fontFamily: "montserrat",
                 fontWeight: FontWeight.bold
               ),
             ),

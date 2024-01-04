@@ -1,4 +1,5 @@
 import 'package:dcce_handbook/pages/grid_item.dart';
+import 'package:dcce_handbook/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 import 'models/level.dart';
@@ -18,34 +19,51 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomePage(title: "Home"),
+      home: HomePage(title: "Home"),
     );
   }
 }
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget{
   const HomePage({super.key, required this.title});
   final String title;
+
+
+  @override
+  HomePageState createState()=>  HomePageState();
+
+}
+
+class HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: buildAppBar(),
+      body: const HomePagee(),
+    );
+  }
+
+  AppBar buildAppBar() {
+    return AppBar(
         title: Text(
-          title,
+          widget.title,
           style: const TextStyle(
+            fontFamily: "montserrat",
             fontWeight: FontWeight.bold,
         ),
       ),
         centerTitle: false,
         actions: [
           IconButton(
-              onPressed: (){},
+              onPressed: (){
+                // Todo() handle click
+        },
               icon: const Icon(Icons.shield_moon)
           ),
           PopupMenuButton(
             onSelected: (value){
-
+              // Todo() handle click
             },
               itemBuilder: (BuildContext context){
                 return [
@@ -55,37 +73,7 @@ class HomePage extends StatelessWidget {
                 ];
               }),
         ],
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Text("Academic Levels",
-            style: Theme.of(context).textTheme.headlineLarge,),
-            const SizedBox(height: 8,),
-            Text("Select A Level Below To See Its Syllabus",
-            style: Theme.of(context).textTheme.bodyMedium),
-            const SizedBox(height: 8,),
-            Expanded(
-              child: GridView.builder(
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    mainAxisSpacing: 4,
-                    crossAxisSpacing: 4
-                  ),
-                  itemCount: Level.levels.length,
-                  itemBuilder: (BuildContext context, int index){
-                    final currentLevel = Level.levels[index];
-                    return buildGridItem(currentLevel);
-                  }),
-            )
-
-          ],
-        ),
-      ),
-    );
+      );
   }
 }
 
