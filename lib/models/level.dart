@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
 class Level{
-  final String icon;
+  final String svgImage;
   final String level;
 
-  const Level({required this.icon, required this.level});
+  const Level({required this.svgImage, required this.level});
 
   static const levels = [
-    Level(icon: "assets/images/undraw_drone_delivery.xml", level: "Fresh Year"),
-    Level(icon: "assets/images/undraw_drone_delivery.xml", level: "Second Year"),
-    Level(icon: "assets/images/undraw_programmer.xml" , level: "Third Year"),
-    Level(icon: "assets/images/undraw_pair_programming.xml", level: "Penultimate Year"),
-    Level(icon: "assets/images/undraw_online_test.xml", level: "Final Year"),
-    Level(icon: "assets/images/undraw_omega.xml", level: "Syllabus"),
+    Level(svgImage: "assets/svg/undraw_throw_down.svg", level: "Fresh Year"),
+    Level(svgImage: "assets/svg/undraw_product_iteration.svg", level: "Second Year"),
+    Level(svgImage: "assets/svg/undraw_sharing_knowledge.svg" , level: "Third Year"),
+    Level(svgImage: "assets/svg/undraw_programmer.svg", level: "Penultimate Year"),
+    Level(svgImage: "assets/svg/undraw_agree.svg", level: "Final Year"),
+    Level(svgImage: "assets/svg/undraw_book_lover.svg", level: "Syllabus"),
   ];
   
 }

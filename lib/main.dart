@@ -45,7 +45,7 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text("Categories",
+            Text("Academic Levels",
             style: Theme.of(context).textTheme.headlineLarge,),
             const SizedBox(height: 8,),
             Text("Select A Level Applicable To You From Below",
