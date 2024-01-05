@@ -1,5 +1,7 @@
+import 'package:dcce_handbook/widgets/dropcap.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:dcce_handbook/util/strings.dart';
 
 import '../widgets/common_app_bar.dart';
 import '../widgets/build_drawer.dart';
@@ -12,13 +14,9 @@ class HistoryScreen extends StatelessWidget {
     return Scaffold(
       appBar: CommonAppBar(title: title),
       drawer: buildDrawer(context),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text(title)
-        ],
-      ),
+      body: const CommonDropCap(paragraph: AppStrings.historyString)
     );
   }
 }
+
+
