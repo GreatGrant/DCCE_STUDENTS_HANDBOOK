@@ -1,3 +1,5 @@
+import 'package:dcce_handbook/util/strings.dart';
+import 'package:dcce_handbook/widgets/dropcap.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -12,13 +14,7 @@ class CourseDurationScreen extends StatelessWidget {
     return Scaffold(
       appBar: CommonAppBar(title: title),
       drawer: buildDrawer(context),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text(title)
-        ],
-      ),
+      body: const CommonDropCap(paragraph: AppStrings.courseDuration)
     );
   }
 }

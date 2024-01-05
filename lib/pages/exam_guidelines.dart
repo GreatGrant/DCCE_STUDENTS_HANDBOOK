@@ -18,7 +18,7 @@ class ExamGuidelinesScreen extends StatelessWidget {
         child: ListView(
           children: [
             buildHeading("STANDARD OF TESTS AND EXAMINATIONS:"),
-           DropCapText(AppStrings.exam_guide_string,
+           DropCapText(AppStrings.examGuideString,
            dropCapStyle: const TextStyle(
              fontFamily: "montserrat",
              color: Color.fromARGB(255, 38, 48, 145),

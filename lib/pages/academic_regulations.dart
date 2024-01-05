@@ -14,7 +14,7 @@ class AcademicRegulationsScreen extends StatelessWidget {
     return Scaffold(
       appBar: CommonAppBar(title: title),
       drawer: buildDrawer(context),
-      body: const CommonDropCap(paragraph: AppStrings.academic_regulation)
+      body: const CommonDropCap(paragraph: AppStrings.academicRegulation)
     );
   }
 }

@@ -19,7 +19,7 @@ However, the objectives of the Department are: -
 • To produce graduates with broad knowledge in general studies, management and humanities, all of which enhance their understanding, contribution and relevance to the society.
 ''';
 
-  static const String exam_guide_string =
+  static const String examGuideString =
       '''Continuous assessment and final examination are normally given for every course at the end of each Semester. 
 The continuous assessment which comes in the form of quiz, tutorial or home and class work, written test, is normally graded as 30% of the total score. 
 
@@ -29,12 +29,25 @@ In such courses, the students use to attend and perform laboratory practical at 
 
 At the end of the semester, the reports are assessed and graded accordingly.''';
 
-  static const String academic_regulation = '''The conduct of examination is one of the most engaging assignments of the Department. At the end of each semester, there should be a full examination in each course.
+  static const String academicRegulation = '''The conduct of examination is one of the most engaging assignments of the Department. At the end of each semester, there should be a full examination in each course.
 
 The examination questions cover across all areas of the courses as contained in the course outline or syllabus. This is done to maintain the standard of learning of the Department. About four weeks to the end of every semester, staff set and submit the examination questions of the various courses offered by them. Each staff set papers comprising of questions, model answer and marking scheme, which are sent out to the external examiner for moderation. The moderation remarks are discussed and implemented in a Departmental meeting after which they are typed, parcelled and locked up in the faculty examination office.
 
 After the examination, which comprises of 30% continuous assessment and 70% examination, the results are discussed in a Departmental meeting of examiners, compiled and presented to the Faculty Board of Examiners. They are ultimately sent by Board to Senate directly, or through the Postgraduate School, if it is a higher degree. The external examiner visits once in a session when he scrutinizes marked scripts, grading, performances, final year projects and interviews graduating students culminating in a report to the Vice Chancellor.
 
 Subsequently, after Senate approval, results are released to students on notice Boards of various Departments of the Faculty and at large the University.''';
+
+
+static const String courseDuration = '''he Department runs the Bachelor of Engineering (B. Eng.) degree courses in Computer Engineering and Communications Engineering.
+
+Duration of Course
+The Bachelor of Engineering (B. Eng.) course in Computer and Communications Engineering normally last for five (5) academic years (100 to 500 Levels). However, direct entry candidates spend four (4) academic years. The course is structured in such a way that all Engineering students offer the same basic courses at 100 to 300 levels in order to prepare them for the Engineering profession. The 400 and 500 level courses are more detailed and focused towards professional training in Computer and Communications Engineering.
+
+A student cannot stay beyond 150% of the normal course duration i.e. 7½ academic sessions.
+
+Graduation Requirements
+To be eligible for the award of a degree, a student must obtain a minimum total number of courses units specified by the department including those earned from industrial experience and University course requirements.
+''';
+
 }
 
