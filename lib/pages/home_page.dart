@@ -19,7 +19,7 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: buildAppBar(widget),
-        drawer: buildDrawer(),
+        drawer: buildDrawer(context),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(

@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 
-Drawer buildDrawer() {
+Drawer buildDrawer(BuildContext context) {
   return Drawer(
     elevation: 8,
     shape: RoundedRectangleBorder(
@@ -40,6 +40,7 @@ Drawer buildDrawer() {
           ),
           onTap: (){
             // Todo() handle navigation.
+            Navigator.pop(context);
           },
         ),
         ListTile(
@@ -52,6 +53,8 @@ Drawer buildDrawer() {
           ),
           onTap: (){
             // Todo() handle navigation.
+            Navigator.pop(context);
+
           },
         ),ListTile(
           leading: const Icon(Icons.sticky_note_2),
@@ -63,6 +66,8 @@ Drawer buildDrawer() {
           ),
           onTap: (){
             // Todo() handle navigation.
+            Navigator.pop(context);
+
           },
         ),ListTile(
           leading: const Icon(Icons.menu_book),
@@ -74,6 +79,8 @@ Drawer buildDrawer() {
           ),
           onTap: (){
             // Todo() handle navigation.
+            Navigator.pop(context);
+
           },
         ),ListTile(
           leading: const Icon(Icons.safety_check),
@@ -85,6 +92,8 @@ Drawer buildDrawer() {
           ),
           onTap: (){
             // Todo() handle navigation.
+            Navigator.pop(context);
+
           },
         ),ListTile(
           leading: const Icon(Icons.admin_panel_settings),
@@ -96,6 +105,8 @@ Drawer buildDrawer() {
           ),
           onTap: (){
             // Todo() handle navigation.
+            Navigator.pop(context);
+
           },
         ),ListTile(
           leading: const Icon(Icons.access_time),
@@ -107,6 +118,8 @@ Drawer buildDrawer() {
           ),
           onTap: (){
             // Todo() handle navigation.
+            Navigator.pop(context);
+
           },
         ),
         ListTile(
@@ -119,6 +132,8 @@ Drawer buildDrawer() {
           ),
           onTap: (){
             // Todo() handle navigation.
+            Navigator.pop(context);
+
           },
         ),ListTile(
           leading: const Icon(Icons.rate_review),
@@ -130,6 +145,8 @@ Drawer buildDrawer() {
           ),
           onTap: (){
             // Todo() handle navigation.
+            Navigator.pop(context);
+
           },
         ),ListTile(
           leading: const Icon(Icons.person),
@@ -141,6 +158,8 @@ Drawer buildDrawer() {
           ),
           onTap: (){
             // Todo() handle navigation.
+            Navigator.pop(context);
+
           },
         ),
 
