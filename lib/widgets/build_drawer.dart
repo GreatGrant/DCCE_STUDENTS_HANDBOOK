@@ -1,4 +1,14 @@
 
+import 'package:dcce_handbook/pages/academic_regulations.dart';
+import 'package:dcce_handbook/pages/academic_requirements.dart';
+import 'package:dcce_handbook/pages/course_duration.dart';
+import 'package:dcce_handbook/pages/curriculum.dart';
+import 'package:dcce_handbook/pages/exam_guidelines.dart';
+import 'package:dcce_handbook/pages/grading.dart';
+import 'package:dcce_handbook/pages/history.dart';
+import 'package:dcce_handbook/pages/home_page.dart';
+import 'package:dcce_handbook/pages/philosophy.dart';
+import 'package:dcce_handbook/pages/staff.dart';
 import 'package:flutter/material.dart';
 
 Drawer buildDrawer(BuildContext context) {
@@ -41,6 +51,9 @@ Drawer buildDrawer(BuildContext context) {
           onTap: (){
             // Todo() handle navigation.
             Navigator.pop(context);
+            Navigator.pushReplacement(context,
+            MaterialPageRoute(builder: (context) => const HomePage(title: "HomePage")));
+
           },
         ),
         ListTile(
@@ -54,7 +67,10 @@ Drawer buildDrawer(BuildContext context) {
           onTap: (){
             // Todo() handle navigation.
             Navigator.pop(context);
-
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => const HistoryScreen(title: "History")
+                )
+            );
           },
         ),ListTile(
           leading: const Icon(Icons.sticky_note_2),
@@ -67,6 +83,10 @@ Drawer buildDrawer(BuildContext context) {
           onTap: (){
             // Todo() handle navigation.
             Navigator.pop(context);
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => const PhilosophyScreen(title: "Philosophy")
+                )
+            );
 
           },
         ),ListTile(
@@ -80,7 +100,10 @@ Drawer buildDrawer(BuildContext context) {
           onTap: (){
             // Todo() handle navigation.
             Navigator.pop(context);
-
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => const ExamGuidelinesScreen(title: "Exam Guidelines")
+                )
+            );
           },
         ),ListTile(
           leading: const Icon(Icons.safety_check),
@@ -93,7 +116,12 @@ Drawer buildDrawer(BuildContext context) {
           onTap: (){
             // Todo() handle navigation.
             Navigator.pop(context);
-
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => const AcademicRegulationsScreen(
+                    title: "Academic Regulations"
+                )
+                )
+            );
           },
         ),ListTile(
           leading: const Icon(Icons.admin_panel_settings),
@@ -106,7 +134,12 @@ Drawer buildDrawer(BuildContext context) {
           onTap: (){
             // Todo() handle navigation.
             Navigator.pop(context);
-
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => const AcademicRequirementsScreen(
+                    title: "Academic Requirements"
+                )
+                )
+            );
           },
         ),ListTile(
           leading: const Icon(Icons.access_time),
@@ -119,23 +152,15 @@ Drawer buildDrawer(BuildContext context) {
           onTap: (){
             // Todo() handle navigation.
             Navigator.pop(context);
-
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => const CourseDurationScreen(
+                    title: "Course Duration"
+                )
+                )
+            );
           },
         ),
         ListTile(
-          leading: const Icon(Icons.event_note),
-          title: const Text(
-            "Curriculum",
-            style: TextStyle(
-                fontFamily: "montserrat"
-            ),
-          ),
-          onTap: (){
-            // Todo() handle navigation.
-            Navigator.pop(context);
-
-          },
-        ),ListTile(
           leading: const Icon(Icons.rate_review),
           title: const Text(
             "Grading",
@@ -144,8 +169,11 @@ Drawer buildDrawer(BuildContext context) {
             ),
           ),
           onTap: (){
-            // Todo() handle navigation.
             Navigator.pop(context);
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => const GradingScreen(title: "Grading")
+                )
+            );
 
           },
         ),ListTile(
@@ -157,9 +185,11 @@ Drawer buildDrawer(BuildContext context) {
             ),
           ),
           onTap: (){
-            // Todo() handle navigation.
             Navigator.pop(context);
-
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => const StaffScreen(title: "Staff & Management")
+                )
+            );
           },
         ),
 

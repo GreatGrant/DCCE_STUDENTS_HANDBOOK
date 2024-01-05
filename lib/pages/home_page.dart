@@ -1,7 +1,7 @@
 import 'package:dcce_handbook/widgets/grid_item.dart';
 import 'package:flutter/material.dart';
 import '../models/level.dart';
-import '../widgets/build_appbar.dart';
+import '../widgets/common_app_bar.dart';
 import '../widgets/build_drawer.dart';
 
 class HomePage extends StatefulWidget{
@@ -18,7 +18,7 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: buildAppBar(widget),
+        appBar: CommonAppBar(title: widget.title),
         drawer: buildDrawer(context),
         body: Padding(
           padding: const EdgeInsets.all(8.0),

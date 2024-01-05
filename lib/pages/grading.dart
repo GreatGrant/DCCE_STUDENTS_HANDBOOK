@@ -1,12 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Grading extends StatelessWidget {
-  const Grading({super.key, required this.title});
+import '../widgets/build_drawer.dart';
+import '../widgets/common_app_bar.dart';
+
+class GradingScreen extends StatelessWidget {
+  const GradingScreen({super.key, required this.title});
   final String title;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: CommonAppBar(title: title),
+      drawer: buildDrawer(context),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
