@@ -19,11 +19,15 @@ class ExamGuidelinesScreen extends StatelessWidget {
           children: [
             buildHeading("STANDARD OF TESTS AND EXAMINATIONS:"),
            DropCapText(AppStrings.exam_guide_string,
+           dropCapStyle: const TextStyle(
+             fontFamily: "montserrat",
+             color: Color.fromARGB(255, 38, 48, 145),
+           ),
            style: const TextStyle(
                fontFamily: "montserrat",
-               color: Color.fromARGB(255, 38, 48, 145),
                fontSize: 16
-           ),),
+           ),
+           ),
             buildHeading("EXTERNAL EXAMINATION SYSTEM:"),
             buildParagraph(
                 "The Department of Computer and Communications Engineering has not yet started taking its Departmental courses for moderation. Thus, External Examiner’s comment is also not available yet."),
@@ -124,7 +128,7 @@ Widget buildParagraph(String text, {bool isPenalty = false}) {
       style: TextStyle(
         fontSize: 16,
         fontFamily: "montserrat",
-        color: isPenalty ? Colors.red : const Color.fromARGB(255, 38, 48, 145),
+        color: isPenalty ? Colors.red : Colors.black,
       ),
     ),
   );
@@ -141,7 +145,7 @@ Widget buildOrderedListItem(String text, {bool isPenalty = false}) {
           style: TextStyle(
             fontSize: 16,
             fontFamily: "montserrat",
-            color: isPenalty ? Colors.red : const Color.fromARGB(255, 38, 48, 145),
+            color: isPenalty ? Colors.red : Colors.black,
           ),
         ),
         const SizedBox(width: 8),
@@ -151,7 +155,7 @@ Widget buildOrderedListItem(String text, {bool isPenalty = false}) {
             style: TextStyle(
               fontSize: 16,
               fontFamily: "montserrat",
-              color: isPenalty ? Colors.red : const Color.fromARGB(255, 38, 48, 145),
+              color: isPenalty ? Colors.red : Colors.black,
             ),
           ),
         ),
@@ -171,7 +175,7 @@ Widget buildUnorderedListItem(String text, {bool isPenalty = false}) {
           style: TextStyle(
             fontSize: 16,
             fontFamily: "montserrat",
-            color: isPenalty ? Colors.red : const Color.fromARGB(255, 38, 48, 145),
+            color: isPenalty ? Colors.red : Colors.black,
           ),
         ),
         const SizedBox(width: 8),
@@ -181,7 +185,7 @@ Widget buildUnorderedListItem(String text, {bool isPenalty = false}) {
             style: TextStyle(
               fontSize: 16,
               fontFamily: "montserrat",
-              color: isPenalty ? Colors.red : Color.fromARGB(255, 38, 48, 145),
+              color: isPenalty ? Colors.red : Colors.black,
             ),
           ),
         ),

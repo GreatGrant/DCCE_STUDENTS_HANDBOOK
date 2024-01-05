@@ -17,9 +17,12 @@ class CommonDropCap extends StatelessWidget {
         children: [
           DropCapText(
             paragraph,
+            dropCapStyle: const TextStyle(
+                fontFamily: "montserrat",
+                color: Color.fromARGB(255, 38, 48, 145),
+            ),
             style: const TextStyle(
               fontFamily: "montserrat",
-              color: Color.fromARGB(255, 38, 48, 145),
               fontSize: 16
             ),
 
