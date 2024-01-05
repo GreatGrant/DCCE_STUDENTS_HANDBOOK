@@ -38,7 +38,7 @@ After the examination, which comprises of 30% continuous assessment and 70% exam
 Subsequently, after Senate approval, results are released to students on notice Boards of various Departments of the Faculty and at large the University.''';
 
 
-static const String courseDuration = '''he Department runs the Bachelor of Engineering (B. Eng.) degree courses in Computer Engineering and Communications Engineering.
+static const String courseDuration = '''The Department runs the Bachelor of Engineering (B. Eng.) degree courses in Computer Engineering and Communications Engineering.
 
 Duration of Course
 The Bachelor of Engineering (B. Eng.) course in Computer and Communications Engineering normally last for five (5) academic years (100 to 500 Levels). However, direct entry candidates spend four (4) academic years. The course is structured in such a way that all Engineering students offer the same basic courses at 100 to 300 levels in order to prepare them for the Engineering profession. The 400 and 500 level courses are more detailed and focused towards professional training in Computer and Communications Engineering.
@@ -48,6 +48,7 @@ A student cannot stay beyond 150% of the normal course duration i.e. 7½ academi
 Graduation Requirements
 To be eligible for the award of a degree, a student must obtain a minimum total number of courses units specified by the department including those earned from industrial experience and University course requirements.
 ''';
-
+static const String gradingParagraphString = 'A student shall pass an examination if he/she scores a grade of "E" (1.00 Point) or above. '
+    'A student who absents himself/herself from an examination for a course which he has duly registered without a reason acceptable to SENATE will automatically earn "F" grade for the examination.';
 }
 
