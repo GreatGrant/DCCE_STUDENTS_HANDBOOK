@@ -19,5 +19,6 @@ However, the objectives of the Department are: -
 • To produce graduates with broad knowledge in general studies, management and humanities, all of which enhance their understanding, contribution and relevance to the society.
 ''';
 
+  static const String exam_guide_string = "Continuous assessment and final examination are normally given for every course at the end of each Semester. The continuous assessment which comes in the form of quiz, tutorial or home and class work, written test, is normally graded as 30% of the total score. The examination takes 70% making a total of 100%. However, some courses, such as laboratory and workshop practice are non-examinable. In such courses, the students use to attend and perform laboratory practical at least once in a week and write a comprehensive report on the experiment they perform. At the end of the semester, the reports are assessed and graded accordingly.";
 }
 
