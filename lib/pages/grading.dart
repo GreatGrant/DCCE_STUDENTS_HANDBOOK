@@ -5,7 +5,7 @@ import '../widgets/build_drawer.dart';
 import '../widgets/common_app_bar.dart';
 
 class GradingScreen extends StatefulWidget {
-  const GradingScreen({super.key, required this.title});
+  const GradingScreen({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
@@ -27,24 +27,27 @@ class GradingScreenState extends State<GradingScreen> {
     return Scaffold(
       appBar: const CommonAppBar(title: "Grading"),
       drawer: buildDrawer(context),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Padding(
-            padding: EdgeInsets.all(16.0),
-            child: Text(
-              AppStrings.gradingParagraphString,
-              style: TextStyle(fontSize: 16),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: EdgeInsets.all(16.0),
+              child: Text(
+                AppStrings.gradingParagraphString,
+                style: TextStyle(fontSize: 16, fontFamily: "montserrat"),
+              ),
             ),
-          ),
-          const SizedBox(height: 16),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(16.0), // Add padding to the WebViewWidget
-              child: WebViewWidget(controller: _controller),
+            const SizedBox(height: 16),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: SizedBox(
+                height: MediaQuery.of(context).size.height - 400, // Adjust the height as needed
+                child: WebViewWidget(controller: _controller),
             ),
-          ),
-        ],
+            ),
+          ],
+        ),
       ),
     );
   }
