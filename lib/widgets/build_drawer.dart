@@ -126,7 +126,7 @@ Drawer buildDrawer(BuildContext context) {
         ),ListTile(
           leading: const Icon(Icons.admin_panel_settings),
           title: const Text(
-            "Academic Requirements",
+            "Admission Requirements",
             style: TextStyle(
                 fontFamily: "montserrat"
             ),

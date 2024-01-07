@@ -31,7 +31,7 @@ class GradingScreenState extends State<GradingScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
+            const Padding(
               padding: EdgeInsets.all(16.0),
               child: Text(
                 AppStrings.gradingParagraphString,
