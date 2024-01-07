@@ -19,7 +19,7 @@ class GradingScreenState extends State<GradingScreen> {
   void initState() {
     super.initState();
     _controller = WebViewController();
-    _onLoadFlutterAssetExample(_controller, context);
+    _onLoadFlutterAsset(_controller, context);
   }
 
   @override
@@ -30,13 +30,19 @@ class GradingScreenState extends State<GradingScreen> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
-            AppStrings.gradingParagraphString,
-            style: TextStyle(fontSize: 16),
+          const Padding(
+            padding: EdgeInsets.all(16.0),
+            child: Text(
+              AppStrings.gradingParagraphString,
+              style: TextStyle(fontSize: 16),
+            ),
           ),
           const SizedBox(height: 16),
           Expanded(
-            child: WebViewWidget(controller: _controller),
+            child: Padding(
+              padding: const EdgeInsets.all(16.0), // Add padding to the WebViewWidget
+              child: WebViewWidget(controller: _controller),
+            ),
           ),
         ],
       ),
@@ -44,7 +50,7 @@ class GradingScreenState extends State<GradingScreen> {
   }
 }
 
-Future<void> _onLoadFlutterAssetExample(
+Future<void> _onLoadFlutterAsset(
     WebViewController controller, BuildContext context) async {
   await controller.loadFlutterAsset('assets/tables/grading_table.html');
 }

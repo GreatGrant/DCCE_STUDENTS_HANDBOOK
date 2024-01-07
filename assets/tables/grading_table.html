@@ -4,19 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.5, user-scalable=no">
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 20px;
-            overflow-x: auto; /* Enable horizontal scroll for small screens */
-            border-spacing: 0; /* Remove spacing between table cells */
+            margin-bottom: 0;
+            overflow-x: auto;
+            border-spacing: 0;
         }
 
+        tr {
+            max-height: 2.1em;
+        }
         th, td {
-            border: 1px solid #6C63FF; /* Set border color */
-            padding: 10px; /* Add padding to table cells */
+            border: 1px solid #6C63FF;
+            padding: 10px;
             text-align: left;
-            transition: font-size 0.3s; /* Add transition for smooth font size change */
+            transition: font-size 0.3s;
         }
 
         th {
@@ -24,27 +32,40 @@
         }
 
         tr:hover {
-            background-color: #f5f5f5; /* Background color on hover */
+            background-color: #f5f5f5;
             cursor: pointer;
         }
 
         tr:hover td {
-            font-size: 2.1em; /* Increase font size on hover */
+            font-size: 2.1em;
         }
 
         @media screen and (max-width: 600px) {
-            /* Make the table responsive for small screens */
             table {
                 font-size: 14px;
             }
 
             th, td {
-                padding: 8px; /* Adjust padding for smaller screens */
+                padding: 8px;
             }
 
             tr:hover td {
-                font-size: inherit; /* Reset font size on hover for smaller screens */
+                font-size: inherit;
             }
+        }
+
+        /* Additional styling for better visualization */
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        table {
+            flex: 1;
         }
     </style>
 </head>
@@ -117,5 +138,6 @@
         <td>Fail</td>
     </tr>
 </table>
+
 </body>
 </html>
