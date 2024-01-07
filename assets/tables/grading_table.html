@@ -1,45 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-table {
-width: 100%;
-border-collapse: collapse;
-margin-bottom: 20px;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, user-scalable=no">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            overflow-x: auto; /* Enable horizontal scroll for small screens */
+            border-spacing: 0; /* Remove spacing between table cells */
+        }
 
-th, td {
-border: 1px solid #6C63FF; /* Set border color */
-padding: 8px;
-text-align: left;
-}
+        th, td {
+            border: 1px solid #6C63FF; /* Set border color */
+            padding: 10px; /* Add padding to table cells */
+            text-align: left;
+            transition: font-size 0.3s; /* Add transition for smooth font size change */
+        }
 
-th {
-background-color: #f2f2f2;
-}
+        th {
+            background-color: #f2f2f2;
+        }
 
-tr:hover {
-background-color: #f5f5f5; /* Background color on hover */
-cursor: pointer;
-}
+        tr:hover {
+            background-color: #f5f5f5; /* Background color on hover */
+            cursor: pointer;
+        }
 
-@media screen and (max-width: 600px) {
-/* Make the table responsive for small screens */
-table {
-font-size: 14px;
-}
+        tr:hover td {
+            font-size: 2.1em; /* Increase font size on hover */
+        }
 
-th, td {
-padding: 6px;
-}
-}
+        @media screen and (max-width: 600px) {
+            /* Make the table responsive for small screens */
+            table {
+                font-size: 14px;
+            }
 
-tr:hover td {
-font-size: 1.1em; /* Increase font size on hover */
-}
-</style>
+            th, td {
+                padding: 8px; /* Adjust padding for smaller screens */
+            }
+
+            tr:hover td {
+                font-size: inherit; /* Reset font size on hover for smaller screens */
+            }
+        }
+    </style>
 </head>
 <body>
 <table>
@@ -106,10 +113,9 @@ font-size: 1.1em; /* Increase font size on hover */
         <td>F</td>
         <td>0</td>
         <td></td>
-        <td> <1 </td>
+        <td> <1</td>
         <td>Fail</td>
     </tr>
 </table>
-
 </body>
 </html>

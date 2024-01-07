@@ -13,31 +13,38 @@ class GradingScreen extends StatefulWidget {
 }
 
 class GradingScreenState extends State<GradingScreen> {
-  double fontSize = 16.0;
   late final WebViewController _controller;
 
   @override
   void initState() {
     super.initState();
-    _controller = WebViewController()..loadRequest(
-    Uri.parse('https://flutter.dev'),
-    );
-    _controller.loadFlutterAsset("assets/tables/grading_table.html");
+    _controller = WebViewController();
+    _onLoadFlutterAssetExample(_controller, context);
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CommonAppBar(title: "Grading"),
       drawer: buildDrawer(context),
-      body: ListView(
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text(
             AppStrings.gradingParagraphString,
             style: TextStyle(fontSize: 16),
           ),
-          WebViewWidget(controller: _controller),
+          const SizedBox(height: 16),
+          Expanded(
+            child: WebViewWidget(controller: _controller),
+          ),
         ],
       ),
     );
   }
+}
+
+Future<void> _onLoadFlutterAssetExample(
+    WebViewController controller, BuildContext context) async {
+  await controller.loadFlutterAsset('assets/tables/grading_table.html');
 }
