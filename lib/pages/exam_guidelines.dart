@@ -3,7 +3,9 @@ import 'package:drop_cap_text/drop_cap_text.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/build_drawer.dart';
+import '../widgets/build_header.dart';
 import '../widgets/common_app_bar.dart';
+import '../widgets/paragraph.dart';
 
 class ExamGuidelinesScreen extends StatelessWidget {
   const ExamGuidelinesScreen({super.key, required this.title});
@@ -110,36 +112,6 @@ class ExamGuidelinesScreen extends StatelessWidget {
   }
 }
 
-Widget buildHeading(String text) {
-  return Padding(
-    padding: const EdgeInsets.symmetric(vertical: 8.0),
-    child: Text(
-      text,
-      style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, fontFamily: "montserrat"),
-    ),
-  );
-}
-
-Widget buildParagraph(String text, {bool isPenalty = false}) {
-  return Padding(
-    padding: const EdgeInsets.only(bottom: 8.0),
-    child: Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Expanded(
-          child: Text(
-            text,
-            style: TextStyle(
-              fontSize: 16,
-              fontFamily: "montserrat",
-              color: isPenalty ? Colors.red : Colors.black,
-            ),
-          ),
-        ),
-      ],
-    ),
-  );
-}
 
 Widget buildUnorderedListItem(String text, {bool isPenalty = false}) {
   return Padding(

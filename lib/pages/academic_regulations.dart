@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../util/strings.dart';
 import '../widgets/build_drawer.dart';
 import '../widgets/common_app_bar.dart';
-import '../widgets/dropcap.dart';
+import '../widgets/common_dropcap_layout.dart';
 
 class AcademicRegulationsScreen extends StatelessWidget {
   const AcademicRegulationsScreen({super.key, required this.title});
@@ -14,7 +14,7 @@ class AcademicRegulationsScreen extends StatelessWidget {
     return Scaffold(
       appBar: CommonAppBar(title: title),
       drawer: buildDrawer(context),
-      body: const CommonDropCap(paragraph: AppStrings.academicRegulation)
+      body: const CommonDropCapLayout(paragraph: AppStrings.academicRegulation)
     );
   }
 }

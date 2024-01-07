@@ -1,5 +1,5 @@
 import 'package:dcce_handbook/util/strings.dart';
-import 'package:dcce_handbook/widgets/dropcap.dart';
+import 'package:dcce_handbook/widgets/common_dropcap_layout.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +14,7 @@ class PhilosophyScreen extends StatelessWidget {
     return Scaffold(
       appBar: CommonAppBar(title: title),
       drawer: buildDrawer(context),
-      body: const CommonDropCap(paragraph: AppStrings.philosophyString)
+      body: const CommonDropCapLayout(paragraph: AppStrings.philosophyString)
     );
   }
 }
