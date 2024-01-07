@@ -12,11 +12,18 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'DCCE Student Handbook',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      theme: ThemeData.light(
         useMaterial3: true,
+      ).copyWith(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      ),
+      darkTheme: ThemeData.dark(
+        useMaterial3: true,
+      ).copyWith(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       home: const HomePage(title: "Home"),
     );
   }
 }
+

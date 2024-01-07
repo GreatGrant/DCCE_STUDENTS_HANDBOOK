@@ -1,15 +1,27 @@
 import 'package:flutter/material.dart';
 
-class CommonAppBar extends StatelessWidget implements PreferredSizeWidget{
+class CommonAppBar extends StatefulWidget implements PreferredSizeWidget{
   const CommonAppBar({super.key, required this.title});
 
   final String title;
 
+
+  @override
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+
+  @override
+  State<StatefulWidget> createState() => CommonAppBarState();
+
+}
+
+class CommonAppBarState extends State<CommonAppBar>{
+
   @override
   Widget build(BuildContext context) {
+    bool isDarkMode = false;
     return AppBar(
       title: Text(
-        title,
+        widget.title,
         style: const TextStyle(
           fontFamily: "montserrat",
           fontWeight: FontWeight.bold,
@@ -18,10 +30,13 @@ class CommonAppBar extends StatelessWidget implements PreferredSizeWidget{
       centerTitle: false,
       actions: [
         IconButton(
-            onPressed: (){
-              // Todo() handle click
-            },
-            icon: const Icon(Icons.bedtime)
+          icon: const Icon(Icons.bedtime),
+          onPressed: (){
+            setState(() {
+              isDarkMode = !isDarkMode;
+            });
+          },
+
         ),
         PopupMenuButton(
             onSelected: (value){
@@ -37,7 +52,5 @@ class CommonAppBar extends StatelessWidget implements PreferredSizeWidget{
       ],
     );
   }
-
-  @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }
+

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
 import '../models/level.dart';
 
 Widget buildGridItem(Level level) {
@@ -10,7 +9,6 @@ Widget buildGridItem(Level level) {
       padding: const EdgeInsets.all(8.0),
       child: Card(
         elevation: 6,
-        color: const Color.fromARGB(255, 38, 48, 145),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -18,9 +16,10 @@ Widget buildGridItem(Level level) {
             Text(
               level.level,
               style: const TextStyle(
-                color: Colors.white,
-                fontFamily: "montserrat",
-                fontWeight: FontWeight.bold
+                  color: Color.fromARGB(255, 38, 48, 145),
+                  fontFamily: "montserrat",
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold
               ),
             ),
             const SizedBox(height: 8),
