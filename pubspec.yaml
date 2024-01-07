@@ -20,6 +20,7 @@ dependencies:
   flutter_svg: ^2.0.9
   drop_cap_text: ^1.1.3
   webview_flutter: ^4.2.2
+  path_provider: ^2.1.1
 
 dev_dependencies:
   flutter_test:
@@ -47,6 +48,7 @@ flutter:
   assets:
     - assets/svg/
     - assets/images/
+    - assets/tables/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
