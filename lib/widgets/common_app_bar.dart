@@ -20,10 +20,12 @@ class CommonAppBarState extends State<CommonAppBar>{
   Widget build(BuildContext context) {
     bool isDarkMode = false;
     return AppBar(
+      iconTheme: Theme.of(context).iconTheme,
       backgroundColor: Theme.of(context).primaryColor,
       title: Text(
         widget.title,
-        style: const TextStyle(
+        style: TextStyle(
+          color: Theme.of(context).colorScheme.onPrimary,
           fontFamily: "montserrat",
           fontWeight: FontWeight.bold,
         ),
