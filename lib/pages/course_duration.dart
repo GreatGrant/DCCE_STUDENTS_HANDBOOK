@@ -26,9 +26,9 @@ class CourseDurationScreen extends StatelessWidget {
           children: [
             const CommonDropCap(paragraph: AppStrings.courseDuration),
             buildHeading(AppStrings.courseDurationHead),
-            buildParagraph(AppStrings.courseDurationParagraph),
+            buildParagraph(context, AppStrings.courseDurationParagraph),
             buildHeading(AppStrings.courseDurationHead2),
-            buildParagraph(AppStrings.courseDurationParagraph2),
+            buildParagraph(context, AppStrings.courseDurationParagraph2),
           ],
         ),
       )

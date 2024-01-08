@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget buildParagraph(String text, {bool isPenalty = false}) {
+Widget buildParagraph(BuildContext context, String text, {bool isPenalty = false}) {
   return Padding(
     padding: const EdgeInsets.only(bottom: 8.0),
     child: Row(
@@ -12,7 +12,7 @@ Widget buildParagraph(String text, {bool isPenalty = false}) {
             style: TextStyle(
               fontSize: 16,
               fontFamily: "montserrat",
-              color: isPenalty ? Colors.red : Colors.black,
+              color: isPenalty ? Colors.red : Theme.of(context).textTheme.displaySmall?.color,
             ),
           ),
         ),
