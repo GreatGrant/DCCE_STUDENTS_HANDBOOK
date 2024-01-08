@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../util/theme_provider.dart';
 
 class CommonAppBar extends StatefulWidget implements PreferredSizeWidget{
   const CommonAppBar({super.key, required this.title});
-
   final String title;
-
 
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
@@ -15,6 +16,7 @@ class CommonAppBar extends StatefulWidget implements PreferredSizeWidget{
 }
 
 class CommonAppBarState extends State<CommonAppBar>{
+
 
   @override
   Widget build(BuildContext context) {
@@ -33,10 +35,11 @@ class CommonAppBarState extends State<CommonAppBar>{
       centerTitle: false,
       actions: [
         IconButton(
-          icon: const Icon(Icons.bedtime),
+          icon: Icon(isDarkMode ? Icons.sunny : Icons.bedtime),
           onPressed: (){
             setState(() {
               isDarkMode = !isDarkMode;
+              _toggleTheme(context, isDarkMode);
             });
           },
 
@@ -55,5 +58,14 @@ class CommonAppBarState extends State<CommonAppBar>{
       ],
     );
   }
+}
+
+
+void _toggleTheme(BuildContext context, bool isDarkMode){
+  ThemeMode themeMode =
+      isDarkMode ? ThemeMode.dark : ThemeMode.light;
+
+  Provider.of<ThemeProvider>(context, listen: false)
+      .setThemeMode(themeMode);
 }
 
