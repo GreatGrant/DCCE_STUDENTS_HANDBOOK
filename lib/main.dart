@@ -15,21 +15,25 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
       create: (context) => ThemeProvider(),
-      child: MaterialApp(
-        title: 'DCCE Student Handbook',
-        theme: ThemeData.light(
-          useMaterial3: true,
-        ).copyWith(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        ),
-        darkTheme: ThemeData.dark(
-          useMaterial3: true,
-        ).copyWith(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        ),
-        home: const HomePage(title: "Home"),
+      child: Consumer<ThemeProvider>(
+        builder: (context, themeProvider, child) {
+          return MaterialApp(
+            title: 'DCCE Student Handbook',
+            theme: ThemeData.light(
+              useMaterial3: true,
+            ).copyWith(
+              colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+            ),
+            darkTheme: ThemeData.dark(
+              useMaterial3: true,
+            ).copyWith(
+              colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+            ),
+            themeMode: themeProvider.themeMode, // Get theme mode from provider
+            home: const HomePage(title: "Home"),
+          );
+        },
       ),
     );
   }
 }
-
