@@ -23,14 +23,16 @@ class MyApp extends StatelessWidget {
               useMaterial3: true,
             ).copyWith(
               colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+              canvasColor: Colors.white
             ),
             darkTheme: ThemeData.dark(
               useMaterial3: true,
             ).copyWith(
               colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+              canvasColor: Colors.grey[900]
             ),
             themeMode: themeProvider.themeMode, // Get theme mode from provider
-            home: const HomePage(title: "Home"),
+            home: const HomePage(title: "DCCE Handbook"),
           );
         },
       ),

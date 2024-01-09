@@ -10,13 +10,12 @@ import 'package:dcce_handbook/pages/home_page.dart';
 import 'package:dcce_handbook/pages/philosophy.dart';
 import 'package:dcce_handbook/pages/staff.dart';
 import 'package:flutter/material.dart';
-
 import 'list_tile_icon.dart';
 import 'list_tile_text.dart';
 
 Drawer buildDrawer(BuildContext context) {
   return Drawer(
-    backgroundColor: Theme.of(context).primaryColor,
+    backgroundColor: Theme.of(context).canvasColor,
     elevation: 8,
     shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16)

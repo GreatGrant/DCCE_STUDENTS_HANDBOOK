@@ -16,14 +16,15 @@ class CommonAppBar extends StatefulWidget implements PreferredSizeWidget{
 }
 
 class CommonAppBarState extends State<CommonAppBar>{
-
+  bool isDarkMode = false;
 
   @override
   Widget build(BuildContext context) {
-    bool isDarkMode = false;
+
     return AppBar(
+      elevation: 6,
       iconTheme: Theme.of(context).iconTheme,
-      backgroundColor: Theme.of(context).primaryColor,
+      backgroundColor: Colors.transparent,
       title: Text(
         widget.title,
         style: TextStyle(
@@ -59,7 +60,6 @@ class CommonAppBarState extends State<CommonAppBar>{
     );
   }
 }
-
 
 void _toggleTheme(BuildContext context, bool isDarkMode){
   ThemeMode themeMode =
