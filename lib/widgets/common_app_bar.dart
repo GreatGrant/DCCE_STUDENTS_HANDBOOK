@@ -22,13 +22,12 @@ class CommonAppBarState extends State<CommonAppBar>{
   Widget build(BuildContext context) {
 
     return AppBar(
-      elevation: 6,
       iconTheme: Theme.of(context).iconTheme,
-      backgroundColor: Colors.transparent,
+      backgroundColor: Theme.of(context).canvasColor,
       title: Text(
         widget.title,
         style: TextStyle(
-          color: Theme.of(context).colorScheme.onPrimary,
+          color: Theme.of(context).textTheme.displaySmall?.color,
           fontFamily: "montserrat",
           fontWeight: FontWeight.bold,
         ),
@@ -46,13 +45,14 @@ class CommonAppBarState extends State<CommonAppBar>{
 
         ),
         PopupMenuButton(
+            color: Theme.of(context).canvasColor,
             onSelected: (value){
               // Todo() handle click
             },
             itemBuilder: (BuildContext context){
               return [
-                const PopupMenuItem(
-                    child: Text("About")
+                PopupMenuItem(
+                    child: Text("About", style: TextStyle(color: Theme.of(context).textTheme.displaySmall?.color),)
                 )
               ];
             }),

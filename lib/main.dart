@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
               canvasColor: Colors.grey[900]
             ),
             themeMode: themeProvider.themeMode, // Get theme mode from provider
-            home: const HomePage(title: "DCCE Handbook"),
+            home: const HomePage(title: "Home"),
           );
         },
       ),
