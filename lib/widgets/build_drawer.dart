@@ -50,7 +50,7 @@ Drawer buildDrawer(BuildContext context) {
             // Todo() handle navigation.
             Navigator.pop(context);
             Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => const HomePage(title: "HomePage")));
+            MaterialPageRoute(builder: (context) => const HomePage(title: "Home")));
 
           },
         ),
