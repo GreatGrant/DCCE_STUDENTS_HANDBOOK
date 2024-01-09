@@ -1,8 +1,15 @@
 import 'package:dcce_handbook/widgets/grid_item.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import '../models/level.dart';
 import '../widgets/common_app_bar.dart';
 import '../widgets/build_drawer.dart';
+import 'card_destinations/final_year_screen.dart';
+import 'card_destinations/fourth_year_screen.dart';
+import 'card_destinations/second_year_screen.dart';
+import 'card_destinations/syllabus_screen.dart';
+import 'card_destinations/third_year_screen.dart';
+import 'final_year_screen.dart';
 
 class HomePage extends StatefulWidget{
   const HomePage({super.key, required this.title});
@@ -33,20 +40,29 @@ class HomePageState extends State<HomePage> {
               ),
               const SizedBox(height: 8,),
               Text("Select A Level Below To See Its Syllabus",
-                  style: Theme.of(context).textTheme.bodyMedium),
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      fontFamily: "montserrat"
+                  ),
+              ),
               const SizedBox(height: 8,),
               Expanded(
                 child: GridView.builder(
-                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2,
-                        mainAxisSpacing: 4,
-                        crossAxisSpacing: 4
-                    ),
-                    itemCount: Level.levels.length,
-                    itemBuilder: (BuildContext context, int index){
-                      final currentLevel = Level.levels[index];
-                      return buildGridItem(currentLevel);
-                    }),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    mainAxisSpacing: 4,
+                    crossAxisSpacing: 4,
+                  ),
+                  itemCount: Level.levels.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    final currentLevel = Level.levels[index];
+                    return GestureDetector(
+                      onTap: () {
+                        _navigateToDestination(context, index);
+                      },
+                      child: buildGridItem(currentLevel),
+                    );
+                  },
+                ),
               )
             ],
           ),
@@ -56,3 +72,24 @@ class HomePageState extends State<HomePage> {
 
 }
 
+void _navigateToDestination(BuildContext context, int index){
+  switch(index){
+    case 0:
+      Navigator.push(context, MaterialPageRoute(builder: (context) => const FirstYearScreen(title: 'First Year',)));
+      break;
+    case 1:
+      Navigator.push(context, MaterialPageRoute(builder: (context) => const SecondYearScreen(title: 'Second Year',)));
+      break;
+    case 2:
+      Navigator.push(context, MaterialPageRoute(builder: (context) => const ThirdYearScreen(title: 'Third Year',)));
+      break;
+    case 3:
+      Navigator.push(context, MaterialPageRoute(builder: (context) => const FourthYearScreen(title: 'Fourth Year',)));
+      break;
+    case 4:
+      Navigator.push(context, MaterialPageRoute(builder: (context) => const FinalYearScreen(title: 'Final Year',)));
+      break;
+    default:
+      Navigator.push(context, MaterialPageRoute(builder: (context) => const SyllabusScreen(title: 'Syllabus',)));
+  }
+}
