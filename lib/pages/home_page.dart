@@ -8,7 +8,7 @@ import 'card_destinations/final_year_screen.dart';
 import 'card_destinations/first_year_screen.dart';
 import 'card_destinations/fourth_year_screen.dart';
 import 'card_destinations/second_year_screen.dart';
-import 'card_destinations/syllabus_screen.dart';
+import 'card_destinations/curriculum_screen.dart';
 import 'card_destinations/third_year_screen.dart';
 
 class HomePage extends StatefulWidget{
@@ -90,6 +90,6 @@ void _navigateToDestination(BuildContext context, int index){
       Navigator.push(context, MaterialPageRoute(builder: (context) => const FinalYearScreen(title: 'Final Year',)));
       break;
     default:
-      Navigator.push(context, MaterialPageRoute(builder: (context) => const SyllabusScreen(title: 'Syllabus',)));
+      Navigator.push(context, MaterialPageRoute(builder: (context) => const CurriculumScreen(title: 'Syllabus',)));
   }
 }

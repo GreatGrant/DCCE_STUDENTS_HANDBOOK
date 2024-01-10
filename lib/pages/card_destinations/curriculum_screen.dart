@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
-class FinalYearSecondSemester extends StatelessWidget {
-  const FinalYearSecondSemester({super.key, required this.title});
+class CurriculumScreen extends StatelessWidget {
+  const CurriculumScreen({super.key, required this.title});
   final String title;
 
   @override
