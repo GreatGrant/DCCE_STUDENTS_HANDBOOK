@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:dcce_handbook/widgets/common_app_bar.dart';
+
+import 'common_app_bar.dart';
 
 class CommonYearScreen extends StatelessWidget {
   const CommonYearScreen({
@@ -15,6 +16,8 @@ class CommonYearScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TabController tabController = DefaultTabController.of(context);
+
     return DefaultTabController(
       length: tabs.length,
       child: Scaffold(
@@ -23,6 +26,7 @@ class CommonYearScreen extends StatelessWidget {
           tabs: tabs,
         ),
         body: TabBarView(
+          controller: tabController,
           children: tabViewChildren,
         ),
       ),
