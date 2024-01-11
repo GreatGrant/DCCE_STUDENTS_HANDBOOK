@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'common_app_bar.dart';
 
 class CommonYearScreen extends StatelessWidget {

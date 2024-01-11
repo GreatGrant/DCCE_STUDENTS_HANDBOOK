@@ -3,17 +3,22 @@ import 'package:provider/provider.dart';
 import '../util/theme_provider.dart';
 
 class CommonAppBar extends StatefulWidget implements PreferredSizeWidget {
-  const CommonAppBar({super.key, required this.title, this.tabs});
+  const CommonAppBar({
+    super.key,
+    required this.title,
+    this.tabs,
+    this.tabController,
+  });
+
   final String title;
   final List<Widget>? tabs;
+  final TabController? tabController;
 
   @override
   Size get preferredSize {
     if (tabs != null && tabs!.isNotEmpty) {
-      // Adjust the height with padding when there are tabs
       return const Size.fromHeight(kToolbarHeight + 48.0);
     } else {
-      // Use the default height when there are no tabs
       return const Size.fromHeight(kToolbarHeight);
     }
   }
@@ -24,6 +29,7 @@ class CommonAppBar extends StatefulWidget implements PreferredSizeWidget {
 
 class CommonAppBarState extends State<CommonAppBar>
     with SingleTickerProviderStateMixin {
+
   late TabController _tabController;
   bool isDarkMode = false;
 
@@ -31,7 +37,7 @@ class CommonAppBarState extends State<CommonAppBar>
   void initState() {
     super.initState();
     if(widget.tabs != null && widget.tabs!.isNotEmpty){
-      _tabController = TabController(
+      _tabController = widget.tabController ?? TabController(
         length: widget.tabs?.length ?? 0,
         vsync: this,
       );

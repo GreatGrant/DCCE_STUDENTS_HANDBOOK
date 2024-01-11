@@ -1,4 +1,3 @@
-import 'package:dcce_handbook/widgets/common_app_bar.dart';
 import 'package:flutter/material.dart';
 import '../../widgets/course_contents.dart';
 import '../../widgets/course_header.dart';
