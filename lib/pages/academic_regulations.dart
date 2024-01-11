@@ -12,7 +12,7 @@ class AcademicRegulationsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CommonAppBar(title: title),
+      appBar: CommonAppBar(title: title,),
       drawer: buildDrawer(context),
       body: const CommonDropCapLayout(paragraph: AppStrings.academicRegulation)
     );
