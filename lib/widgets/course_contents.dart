@@ -4,7 +4,7 @@ class CourseContent extends StatelessWidget {
   final String title;
   final String content;
 
-  const CourseContent(this.title, this.content, {super.key});
+  const CourseContent({this.title = "", required this.content, super.key} );
 
   @override
   Widget build(BuildContext context) {
@@ -15,12 +15,18 @@ class CourseContent extends StatelessWidget {
         children: [
           Text(
             title,
-            style: TextStyle(
+            style: const TextStyle(
+              fontFamily: "montserrat",
               fontSize: 18,
               fontWeight: FontWeight.bold,
             ),
           ),
-          Text(content),
+          Text(
+              content,
+            style: const TextStyle(
+                fontFamily: "montserrat"
+            ),
+          ),
         ],
       ),
     );
