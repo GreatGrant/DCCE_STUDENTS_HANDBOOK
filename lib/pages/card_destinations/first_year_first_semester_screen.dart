@@ -196,7 +196,7 @@ Decide methodology: questionnaires, interviews, fieldwork and correspondence. Ga
 Library etiquettes: rules and regulations.'''
               ),
               Padding(
-                padding: const EdgeInsets.all(16.0),
+                padding: const EdgeInsets.all(8.0),
                 child: SizedBox(
                   height: MediaQuery.of(context).size.height - 400,
                   child: WebViewWidget(controller: webViewController),
