@@ -5,7 +5,7 @@ import '../widgets/build_drawer.dart';
 import '../widgets/common_app_bar.dart';
 
 class GradingScreen extends StatefulWidget {
-  const GradingScreen({Key? key, required this.title}) : super(key: key);
+  const GradingScreen({super.key, required this.title});
   final String title;
 
   @override

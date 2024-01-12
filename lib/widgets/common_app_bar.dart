@@ -36,13 +36,14 @@ class CommonAppBarState extends State<CommonAppBar>
   @override
   void initState() {
     super.initState();
-    if(widget.tabs != null && widget.tabs!.isNotEmpty){
+    if (widget.tabs != null && widget.tabs!.isNotEmpty) {
       _tabController = widget.tabController ?? TabController(
-        length: widget.tabs?.length ?? 0,
+        length: widget.tabs!.length,
         vsync: this,
       );
     }
   }
+
 
   @override
   Widget build(BuildContext context) {

@@ -49,7 +49,7 @@ flutter:
   assets:
     - assets/svg/
     - assets/images/
-    - assets/tables/grading_table.html
+    - assets/tables/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

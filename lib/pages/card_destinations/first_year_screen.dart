@@ -20,7 +20,7 @@ class FirstYearScreenState extends State<FirstYearScreen>
   void initState() {
     super.initState();
     _tabController = TabController(
-      length: 2, // Number of tabs
+      length: _getTabs().length,
       vsync: this,
     );
   }
@@ -28,7 +28,11 @@ class FirstYearScreenState extends State<FirstYearScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CommonAppBar(title: widget.title, tabs: _getTabs(), tabController: _tabController),
+      appBar: CommonAppBar(
+          title: widget.title,
+          tabs: _getTabs(),
+          tabController: _tabController
+      ),
       body: TabBarView(
         controller: _tabController,
         children: [
