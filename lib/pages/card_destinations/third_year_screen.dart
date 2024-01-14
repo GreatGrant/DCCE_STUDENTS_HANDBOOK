@@ -42,6 +42,7 @@ class ThirdYearScreenState extends State<ThirdYearScreen>
       ),
     );
   }
+
   List<Widget> _getTabs() {
     return [
       const Tab(text: "First Semester"),
