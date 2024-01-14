@@ -1,8 +1,5 @@
-import 'package:dcce_handbook/pages/card_destinations/second_year_first_semester_screen.dart';
-import 'package:dcce_handbook/pages/card_destinations/second_year_second_semester_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:dcce_handbook/widgets/common_app_bar.dart';
-
 import 'fourth_year_first_semester_screen.dart';
 import 'fourth_year_second_semester_screen.dart';
 
