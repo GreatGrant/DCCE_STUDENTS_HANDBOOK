@@ -27,7 +27,7 @@ class FirstYearSecondSemesterState extends State<FirstYearSecondSemester>{
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(8.0),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -178,7 +178,7 @@ class FirstYearSecondSemesterState extends State<FirstYearSecondSemester>{
                 'The historical development of digital systems, how computers work; the computer systems; the algorithms and basic computer programming concepts. Basic programming language; computer applications; commercial.',
               ),
               Padding(
-                padding: EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(8.0),
                 child: SizedBox(
                   height: MediaQuery.of(context).size.height - 400,
                   child: WebViewWidget(controller: webViewController),
