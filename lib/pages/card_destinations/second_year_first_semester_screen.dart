@@ -25,7 +25,7 @@ class SecondYearFirstSemesterState extends State<SecondYearFirstSemester>{
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
         body: Padding(
             padding: EdgeInsets.all(8.0),
             child: SingleChildScrollView(
@@ -127,10 +127,18 @@ class SecondYearFirstSemesterState extends State<SecondYearFirstSemester>{
                 CourseContent(
                     content:
                         'Philosophy of Science.  History of Engineering and Technology .Safety in Engineering and Introduction to Risk Analysis.The Role of Engineers in Nation Building. Invited Lectures from Professionals')
+                ,
+                Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    height: MediaQuery.of(context).size.height - 400,
+                    child: WebViewWidget(controller: webViewController),
+                  ),
+                ),
               ],
-            )
-            )
-        )
+                ),
+            ),
+        ),
     );
   }
 }
