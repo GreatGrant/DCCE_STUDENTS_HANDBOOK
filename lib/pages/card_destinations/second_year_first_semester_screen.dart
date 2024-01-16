@@ -3,7 +3,6 @@ import 'package:webview_flutter/webview_flutter.dart';
 import '../../widgets/course_contents.dart';
 import '../../widgets/course_header.dart';
 
-
 class SecondYearFirstSemester extends StatefulWidget {
   const SecondYearFirstSemester({super.key, required this.title});
   final String title;
@@ -20,7 +19,7 @@ class SecondYearFirstSemesterState extends State<SecondYearFirstSemester>{
   void initState() {
     super.initState();
     webViewController = WebViewController();
-    // _onLoadFlutterAsset(webViewController, context);
+    _onLoadFlutterAsset(webViewController, context);
   }
 
 
@@ -134,4 +133,10 @@ class SecondYearFirstSemesterState extends State<SecondYearFirstSemester>{
         )
     );
   }
+}
+
+Future<void> _onLoadFlutterAsset(
+    WebViewController controller,
+    BuildContext context) async {
+  await controller.loadFlutterAsset('assets/tables/hundred_level_fs.html');
 }
