@@ -994,7 +994,7 @@ static const String thirdYearFirstSemesterTable = '''<!DOCTYPE html>
 </body>
 </html>''';
 
-static const String thirdYearSecondSemesterTable = '''Copy code
+static const String thirdYearSecondSemesterTable = '''
 <!DOCTYPE html>
 <html>
 
