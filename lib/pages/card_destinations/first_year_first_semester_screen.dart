@@ -1,3 +1,4 @@
+import 'package:dcce_handbook/util/strings.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import '../../widgets/course_contents.dart';
@@ -214,5 +215,5 @@ Library etiquettes: rules and regulations.'''
 
 Future<void> _onLoadFlutterAsset(
     WebViewController controller, BuildContext context) async {
-  await controller.loadFlutterAsset('assets/tables/hundred_level_fs.html');
+  await controller.loadHtmlString(AppStrings.firstYearFirstSemesterTable);
 }

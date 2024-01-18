@@ -1,3 +1,4 @@
+import 'package:dcce_handbook/util/strings.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import '../../widgets/course_contents.dart';
@@ -111,5 +112,5 @@ class ThirdYearFirstSemesterState extends State<ThirdYearFirstSemester> {
 
 Future<void> _onLoadFlutterAsset(
     WebViewController controller, BuildContext context) async {
-  await controller.loadFlutterAsset('assets/tables/three_hundred_fs.html');
+  await controller.loadHtmlString(AppStrings.thirdYearFirstSemesterTable);
 }

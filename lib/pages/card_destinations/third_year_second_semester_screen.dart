@@ -1,3 +1,4 @@
+import 'package:dcce_handbook/util/strings.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import '../../widgets/course_contents.dart';
@@ -203,5 +204,5 @@ Some of the ventures to be focused upon include the following:
 
 Future<void> _onLoadFlutterAsset(
     WebViewController controller, BuildContext context) async {
-  await controller.loadFlutterAsset('assets/tables/three_hundred_ss.html');
+  await controller.loadHtmlString(AppStrings.thirdYearSecondSemesterTable);
 }
