@@ -994,73 +994,81 @@ static const String thirdYearFirstSemesterTable = '''<!DOCTYPE html>
 </body>
 </html>''';
 
-static const String thirdYearSecondSemesterTable = '''<!DOCTYPE html>
+static const String thirdYearSecondSemesterTable = '''Copy code
+<!DOCTYPE html>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=0.5, user-scalable=no">
-    body {
-    margin: 0;
-    padding: 0;
-    }
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
 
-    table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 0;
-    overflow-x: auto;
-    border-spacing: 0;
-    }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 0;
+            overflow-x: auto;
+            border-spacing: 0;
+        }
 
-    tr {
-    max-height: 2.1em;
-    }
-    th, td {
-    border: 1px solid #6C63FF;
-    padding: 10px;
-    text-align: left;
-    transition: font-size 0.3s;
-    }
+        tr {
+            max-height: 2.1em;
+        }
 
-    th {
-    background-color: #f2f2f2;
-    }
+        th,
+        td {
+            border: 1px solid #6C63FF;
+            padding: 10px;
+            text-align: left;
+            transition: font-size 0.3s;
+        }
 
-    tr:hover {
-    background-color: #f5f5f5;
-    cursor: pointer;
-    }
+        th {
+            background-color: #f2f2f2;
+        }
 
-    tr:hover td {
-    font-size: 2.1em;
-    }
+        tr:hover {
+            background-color: #f5f5f5;
+            cursor: pointer;
+        }
 
-    @media screen and (max-width: 600px) {
-    table {
-    font-size: 16px;
-    }
+        tr:hover td {
+            font-size: 2.1em;
+        }
 
-    th, td {
-    padding: 8px;
-    }
+        @media screen and (max-width: 600px) {
+            table {
+                font-size: 16px;
+            }
 
-    tr:hover td {
-    font-size: inherit;
-    }
-    }
+            th,
+            td {
+                padding: 8px;
+            }
 
-    /* Additional styling for better visualization */
-    html, body {
-    height: 100%;
-    }
+            tr:hover td {
+                font-size: inherit;
+            }
+        }
 
-    body {
-    display: flex;
-    flex-direction: column;
-    }
+        /* Additional styling for better visualization */
+        html,
+        body {
+            height: 100%;
+        }
 
-    table {
-    flex: 1;
-    }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        table {
+            flex: 1;
+        }
+    </style>
 </head>
 <body>
 <table>
