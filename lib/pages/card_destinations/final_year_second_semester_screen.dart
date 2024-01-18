@@ -91,7 +91,7 @@ class FinalYearSecondSemesterState extends State<FinalYearSecondSemester> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: SizedBox(
-                  height: MediaQuery.of(context).size.height - 400,
+                  height: MediaQuery.of(context).size.height,
                   child: WebViewWidget(controller: webViewController),
                 ),
               ),
