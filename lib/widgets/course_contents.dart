@@ -13,12 +13,15 @@ class CourseContent extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            title,
-            style: const TextStyle(
-              fontFamily: "montserrat",
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
+          Visibility(
+            visible: title.isNotEmpty,
+            child: Text(
+              title,
+              style: const TextStyle(
+                fontFamily: "montserrat",
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
           Text(
