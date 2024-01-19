@@ -75,21 +75,21 @@ class HomePageState extends State<HomePage> {
 void _navigateToDestination(BuildContext context, int index){
   switch(index){
     case 0:
-      Navigator.push(context, MaterialPageRoute(builder: (context) => const FirstYearScreen(title: 'First Year',)));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const FirstYearScreen(title: 'First Year',)));
       break;
     case 1:
-      Navigator.push(context, MaterialPageRoute(builder: (context) => const SecondYearScreen(title: 'Second Year',)));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const SecondYearScreen(title: 'Second Year',)));
       break;
     case 2:
-      Navigator.push(context, MaterialPageRoute(builder: (context) => const ThirdYearScreen(title: 'Third Year',)));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const ThirdYearScreen(title: 'Third Year',)));
       break;
     case 3:
-      Navigator.push(context, MaterialPageRoute(builder: (context) => const FourthYearScreen(title: 'Fourth Year',)));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const FourthYearScreen(title: 'Fourth Year',)));
       break;
     case 4:
-      Navigator.push(context, MaterialPageRoute(builder: (context) => const FinalYearScreen(title: 'Final Year',)));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const FinalYearScreen(title: 'Final Year',)));
       break;
     default:
-      Navigator.push(context, MaterialPageRoute(builder: (context) => const CurriculumScreen(title: 'Syllabus',)));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const CurriculumScreen(title: 'Syllabus',)));
   }
 }
