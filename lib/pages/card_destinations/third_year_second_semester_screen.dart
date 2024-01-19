@@ -26,7 +26,6 @@ class ThirdYearSecondSemesterState extends State<ThirdYearSecondSemester> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-
     // Now that the dependencies have changed, get the background color
     backgroundColor = getBackgroundColor(context);
 
