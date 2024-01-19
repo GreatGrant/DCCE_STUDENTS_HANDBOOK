@@ -1,7 +1,7 @@
 import 'package:dcce_handbook/pages/academic_regulations.dart';
 import 'package:dcce_handbook/pages/academic_requirements.dart';
 import 'package:dcce_handbook/pages/course_duration.dart';
-import 'package:dcce_handbook/pages/curriculum.dart';
+import 'package:dcce_handbook/pages/card_destinations/curriculum_screen.dart';
 import 'package:dcce_handbook/pages/exam_guidelines.dart';
 import 'package:dcce_handbook/pages/grading.dart';
 import 'package:dcce_handbook/pages/history.dart';
