@@ -844,16 +844,16 @@ static const String thirdYearFirstSemesterTable = '''<!DOCTYPE html>
     }
 
     th {
-        background-color: #f2f2f2;
+        background-color:  #263091;
     }
 
     tr:hover {
-        background-color: #f5f5f5;
+        background-color: transparent;
         cursor: pointer;
     }
 
     tr:hover td {
-        font-size: 2.1em;
+        font-size: 2.1em; 
     }
 
     @media screen and (max-width: 600px) {
