@@ -5,7 +5,7 @@ import '../../widgets/course_contents.dart';
 import '../../widgets/course_header.dart';
 
 class FinalYearSecondSemester extends StatefulWidget {
-  const FinalYearSecondSemester({Key? key, required this.title}) : super(key: key);
+  const FinalYearSecondSemester({super.key, required this.title});
   final String title;
 
   @override
@@ -14,13 +14,25 @@ class FinalYearSecondSemester extends StatefulWidget {
 
 class FinalYearSecondSemesterState extends State<FinalYearSecondSemester> {
   late final WebViewController webViewController;
+  late Color backgroundColor; // Store the background color
 
   @override
   void initState() {
     super.initState();
     webViewController = WebViewController();
-    _onLoadFlutterAsset(webViewController, context);
   }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+
+    // Now that the dependencies have changed, get the background color
+    backgroundColor = getBackgroundColor(context);
+
+    // Load the HTML string and set the background color after the web page has finished loading
+    _onLoadFlutterAsset(webViewController);
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -102,8 +114,43 @@ class FinalYearSecondSemesterState extends State<FinalYearSecondSemester> {
     );
   }
 
+
   Future<void> _onLoadFlutterAsset(
-      WebViewController controller, BuildContext context) async {
+      WebViewController controller) async {
     await controller.loadHtmlString(AppStrings.finalYearSecondSemester);
+
+    // Set the background color after the web page has finished loading
+    controller.clearCache(); // Clear cache to ensure styles are applied
+    controller.setBackgroundColor(backgroundColor);
+    controller.setJavaScriptMode(JavaScriptMode.unrestricted);
+    if (isColorDark(backgroundColor)) {
+      controller.runJavaScript('''
+    document.body.style.color = "white";
+    var tableHeaders = document.querySelectorAll('th');
+    for (var i = 0; i < tableHeaders.length; i++) {
+      tableHeaders[i].style.color = "#ffffff";
+    }  
+    ''');
+    } else {
+      controller.runJavaScript(
+          ''' var tableHeaders = document.querySelectorAll('th');
+          for (var i = 0; i < tableHeaders.length; i++) {
+           tableHeaders[i].style.color = "#ffffff";
+            }
+    '''
+      );
+    }
+  }
+
+  bool isColorDark(Color color) {
+    // Calculate the luminance of the color
+    final luminance = color.computeLuminance();
+
+    // Check if the luminance is below a certain threshold
+    return luminance < 0.5;
+  }
+
+  Color getBackgroundColor(BuildContext context) {
+    return Theme.of(context).canvasColor;
   }
 }
