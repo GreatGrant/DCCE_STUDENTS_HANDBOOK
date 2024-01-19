@@ -1497,7 +1497,16 @@ static const finalYearSecondSemester = '''
 
 const styles = '''
 <style>
+    @font-face {
+        font-family: 'MontserratRegular';
+        src: url('montserrat_regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+      }
+      
     body {
+        display: flex;
+        flex-direction: column;
         font-family: 'MontserratRegular', sans-serif;
         margin: 0;
         padding: 0;
@@ -1554,10 +1563,6 @@ const styles = '''
         height: 100%;
     }
 
-    body {
-        display: flex;
-        flex-direction: column;
-    }
 
     table {
         flex: 1;
