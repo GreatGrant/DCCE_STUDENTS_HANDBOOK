@@ -1493,6 +1493,87 @@ static const finalYearSecondSemester = '''
 </body>
 </html>''';
 
+  static const String gradingTable = '''
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, user-scalable=no">
+    $styles
+</head>
+<body>
+<table>
+    <tr>
+        <th>Score (%)</th>
+        <th>Comment</th>
+        <th>Grade</th>
+        <th>Grade Point (GP)</th>
+        <th>Grade Point Average (GPA)</th>
+        <th>Cumulative Grade Point Average (CGPA)</th>
+        <th>Class Of Degree</th>
+    </tr>
+    <tr>
+        <td> 70-100</td>
+        <td>Excellent</td>
+        <td>A</td>
+        <td>5</td>
+        <td>Obtained by multiplying (1) by GP &
+            dividing by total credit unit
+        </td>
+        <td>4.5-5.0</td>
+        <td>First class Hons.</td>
+    </tr>
+    <tr>
+        <td>60-69</td>
+        <td>Very good</td>
+        <td>B</td>
+        <td>4</td>
+        <td></td>
+        <td>3.5-4.49</td>
+        <td>Second class Hons. (Upper division)</td>
+    </tr>
+
+    <tr>
+        <td>50-59</td>
+        <td>Good</td>
+        <td>C</td>
+        <td>3</td>
+        <td></td>
+        <td>2.49-3.49</td>
+        <td>Second class (lower) Hons.</td>
+    </tr>
+    <tr>
+        <td>45-49</td>
+        <td>Fair</td>
+        <td>D</td>
+        <td>2</td>
+        <td></td>
+        <td>1.5-2.39</td>
+        <td>Third class Hons.</td>
+    </tr>
+    <tr>
+        <td> 40-44</td>
+        <td>Pass</td>
+        <td>E</td>
+        <td>1</td>
+        <td></td>
+        <td>1.0-1.4</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td> 0-39</td>
+        <td>Fail</td>
+        <td>F</td>
+        <td>0</td>
+        <td></td>
+        <td> <1</td>
+        <td>Fail</td>
+    </tr>
+</table>
+
+</body>
+</html>
+''';
 }
 
 const styles = '''
@@ -1569,3 +1650,4 @@ const styles = '''
     }
 </style>
 ''';
+

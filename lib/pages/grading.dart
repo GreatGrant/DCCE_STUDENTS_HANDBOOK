@@ -14,13 +14,25 @@ class GradingScreen extends StatefulWidget {
 
 class GradingScreenState extends State<GradingScreen> {
   late final WebViewController _controller;
+  late Color backgroundColor; // Store the background color
 
   @override
   void initState() {
     super.initState();
     _controller = WebViewController();
-    _onLoadFlutterAsset(_controller, context);
   }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+
+    // Now that the dependencies have changed, get the background color
+    backgroundColor = getBackgroundColor(context);
+
+    // Load the HTML string and set the background color after the web page has finished loading
+    _onLoadFlutterAsset(_controller);
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -51,9 +63,44 @@ class GradingScreenState extends State<GradingScreen> {
       ),
     );
   }
-}
 
-Future<void> _onLoadFlutterAsset(
-    WebViewController controller, BuildContext context) async {
-  await controller.loadFlutterAsset('assets/tables/grading_table.html');
+
+  Future<void> _onLoadFlutterAsset(
+      WebViewController controller) async {
+    await controller.loadHtmlString(AppStrings.gradingTable);
+
+    // Set the background color after the web page has finished loading
+    controller.clearCache(); // Clear cache to ensure styles are applied
+    controller.setBackgroundColor(backgroundColor);
+    controller.setJavaScriptMode(JavaScriptMode.unrestricted);
+    if (isColorDark(backgroundColor)) {
+      controller.runJavaScript('''
+    document.body.style.color = "white";
+    var tableHeaders = document.querySelectorAll('th');
+    for (var i = 0; i < tableHeaders.length; i++) {
+      tableHeaders[i].style.color = "#ffffff";
+    }  
+    ''');
+    } else {
+      controller.runJavaScript(
+          ''' var tableHeaders = document.querySelectorAll('th');
+          for (var i = 0; i < tableHeaders.length; i++) {
+           tableHeaders[i].style.color = "#ffffff";
+            }
+    '''
+      );
+    }
+  }
+
+  bool isColorDark(Color color) {
+    // Calculate the luminance of the color
+    final luminance = color.computeLuminance();
+
+    // Check if the luminance is below a certain threshold
+    return luminance < 0.5;
+  }
+
+  Color getBackgroundColor(BuildContext context) {
+    return Theme.of(context).canvasColor;
+  }
 }
