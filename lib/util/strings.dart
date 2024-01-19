@@ -64,72 +64,7 @@ static const String firstYearFirstSemesterTable = '''<!DOCTYPE html>
     <title>
         100 Level
     </title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: ;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 0;
-            overflow-x: auto;
-            border-spacing: 0;
-        }
-
-        tr {
-            max-height: 2.1em;
-        }
-        th, td {
-            border: 1px solid #6C63FF;
-            padding: 10px;
-            text-align: left;
-            transition: font-size 0.3s;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-
-        tr:hover {
-            background-color: #f5f5f5;
-            cursor: pointer;
-        }
-
-        tr:hover td {
-            font-size: 2.1em;
-        }
-
-        @media screen and (max-width: 600px) {
-            table {
-                font-size: 16px;
-            }
-
-            th, td {
-                padding: 8px;
-            }
-
-            tr:hover td {
-                font-size: inherit;
-            }
-        }
-
-        /* Additional styling for better visualization */
-        html, body {
-            height: 100%;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-        }
-
-        table {
-            flex: 1;
-        }
-    </style>
+    $styles
 </head>
 <body>
 <table>
@@ -247,71 +182,7 @@ static const String firstYearSecondSemesterTable = '''<!DOCTYPE html>
     <title>
         100 Level
     </title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 0;
-            overflow-x: auto;
-            border-spacing: 0;
-        }
-
-        tr {
-            max-height: 2.1em;
-        }
-        th, td {
-            border: 1px solid #6C63FF;
-            padding: 10px;
-            text-align: left;
-            transition: font-size 0.3s;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-
-        tr:hover {
-            background-color: #f5f5f5;
-            cursor: pointer;
-        }
-
-        tr:hover td {
-            font-size: 2.1em;
-        }
-
-        @media screen and (max-width: 600px) {
-            table {
-                font-size: 16px;
-            }
-
-            th, td {
-                padding: 8px;
-            }
-
-            tr:hover td {
-                font-size: inherit;
-            }
-        }
-
-        /* Additional styling for better visualization */
-        html, body {
-            height: 100%;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-        }
-
-        table {
-            flex: 1;
-        }
-    </style>
+    $styles
 </head>
 <body>
 <table>
@@ -422,71 +293,7 @@ static const String secondYearFirstSemesterTable = '''<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=0.5, user-scalable=no">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 0;
-            overflow-x: auto;
-            border-spacing: 0;
-        }
-
-        tr {
-            max-height: 2.1em;
-        }
-        th, td {
-            border: 1px solid #6C63FF;
-            padding: 10px;
-            text-align: left;
-            transition: font-size 0.3s;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-
-        tr:hover {
-            background-color: #f5f5f5;
-            cursor: pointer;
-        }
-
-        tr:hover td {
-            font-size: 2.1em;
-        }
-
-        @media screen and (max-width: 600px) {
-            table {
-                font-size: 16px;
-            }
-
-            th, td {
-                padding: 8px;
-            }
-
-            tr:hover td {
-                font-size: inherit;
-            }
-        }
-
-        /* Additional styling for better visualization */
-        html, body {
-            height: 100%;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-        }
-
-        table {
-            flex: 1;
-        }
-    </style>
+    $styles
 </head>
 
 <body>
@@ -611,79 +418,7 @@ static const String secondYearSecondSemesterTable = '''<!DOCTYPE html>
         200 Level
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=0.5, user-scalable=no">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 0;
-            overflow-x: auto;
-            border-spacing: 0;
-        }
-
-        tr {
-            max-height: 2.1em;
-        }
-        th, td {
-            border: 1px solid #6C63FF;
-            padding: 10px;
-            text-align: left;
-            transition: font-size 0.3s;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-
-        tr:hover {
-            background-color: #f5f5f5;
-            cursor: pointer;
-        }
-
-        tr:hover td {
-            font-size: 2.1em;
-        }
-
-        @media screen and (max-width: 600px) {
-            table {
-                font-size: 16px;
-            }
-
-            th, td {
-                padding: 8px;
-            }
-
-            tr:hover td {
-                font-size: inherit;
-            }
-        }
-
-        /* Additional styling for better visualization */
-        html, body {
-            height: 100%;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-        }
-
-        table {
-            flex: 1;
-        }
-
-        h2{
-            font-size: 30px;
-        }
-
-        p{
-            font-size: 20px;
-        }
-    </style>
+    $styles
 </head>
 <body>
 <table>
@@ -817,82 +552,9 @@ static const String secondYearSecondSemesterTable = '''<!DOCTYPE html>
 static const String thirdYearFirstSemesterTable = '''<!DOCTYPE html>
 <html>
 <head>
-</head>
 <meta name="viewport" content="width=device-width, initial-scale=0.5, user-scalable=no">
-<style>
-@font-face {
-  font-family: 'MontserratRegular';
-  src: url('../../assets/fonts/montserrat_regular.ttf');
-  font-weight: normal;
-  font-style: normal;
-}
-
-    body {
-        font-family: 'MontserratRegular', sans-serif;
-        margin: 0;
-        padding: 0;
-    }
-
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 0;
-        overflow-x: auto;
-        border-spacing: 0;
-    }
-
-    tr {
-        max-height: 2.1em;
-    }
-    th, td {
-        border: 1px solid #6C63FF;
-        padding: 10px;
-        text-align: left;
-        transition: font-size 0.3s;
-    }
-
-    th {
-        background-color:  #263091;
-        color: #ffffff;
-    }
-
-    tr:hover {
-        background-color: transparent;
-        cursor: pointer;
-    }
-
-    tr:hover td {
-        font-size: 2.1em; 
-    }
-
-    @media screen and (max-width: 600px) {
-        table {
-            font-size: 16px;
-        }
-
-        th, td {
-            padding: 8px;
-        }
-
-        tr:hover td {
-            font-size: inherit;
-        }
-    }
-
-    /* Additional styling for better visualization */
-    html, body {
-        height: 100%;
-    }
-
-    body {
-        display: flex;
-        flex-direction: column;
-    }
-
-    table {
-        flex: 1;
-    }
-</style>
+$styles
+</head>
 <body>
 <table>
     <tr>
@@ -1009,75 +671,7 @@ static const String thirdYearSecondSemesterTable = '''
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=0.5, user-scalable=no">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 0;
-            overflow-x: auto;
-            border-spacing: 0;
-        }
-
-        tr {
-            max-height: 2.1em;
-        }
-
-        th,
-        td {
-            border: 1px solid #6C63FF;
-            padding: 10px;
-            text-align: left;
-            transition: font-size 0.3s;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-
-        tr:hover {
-            background-color: #f5f5f5;
-            cursor: pointer;
-        }
-
-        tr:hover td {
-            font-size: 2.1em;
-        }
-
-        @media screen and (max-width: 600px) {
-            table {
-                font-size: 16px;
-            }
-
-            th,
-            td {
-                padding: 8px;
-            }
-
-            tr:hover td {
-                font-size: inherit;
-            }
-        }
-
-        /* Additional styling for better visualization */
-        html,
-        body {
-            height: 100%;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-        }
-
-        table {
-            flex: 1;
-        }
-    </style>
+    $styles
 </head>
 <body>
 <table>
@@ -1208,73 +802,7 @@ static const String fourthYearTable =
   <html>
   <head>
       <meta name="viewport" content="width=device-width, initial-scale=0.5, user-scalable=no">
-      <style>
-          body {
-              margin: 0;
-              padding: 0; 
-              font-family: 'Montserrat', sans-serif;
-  
-          }
-  
-          table {
-              width: 100%;
-              border-collapse: collapse;
-              margin-bottom: 0;
-              overflow-x: auto;
-              border-spacing: 0;
-          }
-  
-          tr {
-              max-height: 2.1em;
-          }
-          th, td {
-              border: 1px solid #6C63FF;
-              padding: 10px;
-              text-align: left;
-              transition: font-size 0.3s;
-          }
-  
-          th {
-              background-color: #f2f2f2;
-          }
-  
-          tr:hover {
-              background-color: #f5f5f5;
-              cursor: pointer;
-          }
-  
-          tr:hover td {
-              font-size: 2.1em;
-          }
-  
-          @media screen and (max-width: 600px) {
-              table {
-                  font-size: 16px;
-              }
-  
-              th, td {
-                  padding: 8px;
-              }
-  
-              tr:hover td {
-                  font-size: inherit;
-              }
-          }
-  
-          /* Additional styling for better visualization */
-          html, body {
-              height: 100%;
-          }
-  
-          body {
-              display: flex;
-              flex-direction: column;
-          }
-  
-          table {
-              flex: 1;
-          }
-      </style>
+      $styles
   </head>
   <body>
   
@@ -1415,71 +943,7 @@ static const String finalYearFirstSemester = '''
         100 Level
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=0.5, user-scalable=no">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 0;
-            overflow-x: auto;
-            border-spacing: 0;
-        }
-
-        tr {
-            max-height: 2.1em;
-        }
-        th, td {
-            border: 1px solid #6C63FF;
-            padding: 10px;
-            text-align: left;
-            transition: font-size 0.3s;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-
-        tr:hover {
-            background-color: #f5f5f5;
-            cursor: pointer;
-        }
-
-        tr:hover td {
-            font-size: 2.1em;
-        }
-
-        @media screen and (max-width: 600px) {
-            table {
-                font-size: 16px;
-            }
-
-            th, td {
-                padding: 8px;
-            }
-
-            tr:hover td {
-                font-size: inherit;
-            }
-        }
-
-        /* Additional styling for better visualization */
-        html, body {
-            height: 100%;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-        }
-
-        table {
-            flex: 1;
-        }
-    </style>
+    $styles
 </head>
 <body>
 <table>
@@ -1784,71 +1248,7 @@ static const finalYearSecondSemester = '''
         100 Level
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=0.5, user-scalable=no">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 0;
-            overflow-x: auto;
-            border-spacing: 0;
-        }
-
-        tr {
-            max-height: 2.1em;
-        }
-        th, td {
-            border: 1px solid #6C63FF;
-            padding: 10px;
-            text-align: left;
-            transition: font-size 0.3s;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-
-        tr:hover {
-            background-color: #f5f5f5;
-            cursor: pointer;
-        }
-
-        tr:hover td {
-            font-size: 2.1em;
-        }
-
-        @media screen and (max-width: 600px) {
-            table {
-                font-size: 16px;
-            }
-
-            th, td {
-                padding: 8px;
-            }
-
-            tr:hover td {
-                font-size: inherit;
-            }
-        }
-
-        /* Additional styling for better visualization */
-        html, body {
-            height: 100%;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-        }
-
-        table {
-            flex: 1;
-        }
-    </style>
+    $styles
 </head>
 <body>
 <h3>COMMUNICATIONS ENGINEERING OPTION</h3>
@@ -2095,3 +1495,72 @@ static const finalYearSecondSemester = '''
 
 }
 
+const styles = '''
+<style>
+    body {
+        font-family: 'MontserratRegular', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 0;
+        overflow-x: auto;
+        border-spacing: 0;
+    }
+
+    tr {
+        max-height: 2.1em;
+    }
+    th, td {
+        border: 1px solid #6C63FF;
+        padding: 10px;
+        text-align: left;
+        transition: font-size 0.3s;
+    }
+
+    th {
+        background-color:  #263091;
+        color: #ffffff;
+    }
+
+    tr:hover {
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    tr:hover td {
+        font-size: 2.1em; 
+    }
+
+    @media screen and (max-width: 600px) {
+        table {
+            font-size: 16px;
+        }
+
+        th, td {
+            padding: 8px;
+        }
+
+        tr:hover td {
+            font-size: inherit;
+        }
+    }
+
+    /* Additional styling for better visualization */
+    html, body {
+        height: 100%;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    table {
+        flex: 1;
+    }
+</style>
+''';
