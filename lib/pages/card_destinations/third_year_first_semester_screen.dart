@@ -130,7 +130,21 @@ class ThirdYearFirstSemesterState extends State<ThirdYearFirstSemester> {
 
     if (isColorDark(backgroundColor)) {
       controller.runJavaScript(
-        'document.body.style.color = "white";',
+          '''
+    document.body.style.color = "white";
+ var tableHeaders = document.querySelectorAll('th');
+    for (var i = 0; i < tableHeaders.length; i++) {
+      tableHeaders[i].style.color = "#ffffff";
+    }  
+    '''
+
+      );
+    }else{
+      controller.runJavaScript(
+        ''' var tableHeaders = document.querySelectorAll('th');
+    for (var i = 0; i < tableHeaders.length; i++) {
+      tableHeaders[i].style.color = "#ffffff";
+    }'''
       );
     }
 

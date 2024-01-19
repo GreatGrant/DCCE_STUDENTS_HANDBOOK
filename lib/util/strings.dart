@@ -820,7 +820,15 @@ static const String thirdYearFirstSemesterTable = '''<!DOCTYPE html>
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=0.5, user-scalable=no">
 <style>
+@font-face {
+  font-family: 'MontserratRegular';
+  src: url('../../assets/fonts/montserrat_regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
     body {
+        font-family: 'MontserratRegular', sans-serif;
         margin: 0;
         padding: 0;
     }
@@ -845,6 +853,7 @@ static const String thirdYearFirstSemesterTable = '''<!DOCTYPE html>
 
     th {
         background-color:  #263091;
+        color: #ffffff;
     }
 
     tr:hover {
