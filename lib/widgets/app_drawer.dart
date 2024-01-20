@@ -28,10 +28,78 @@ class _AppDrawerState extends State<AppDrawer> {
     _drawerSelection = widget.initialSelection;
     super.initState();
   }
-  void _setSelectedNavItem(DrawerSelection currentDrawerSelection){
-  setState(() {
-    _drawerSelection = currentDrawerSelection;
-  });
+
+  void _setSelectedNavItem(DrawerSelection currentDrawerSelection) {
+    // Check if the current screen is already selected
+    if (_drawerSelection == currentDrawerSelection) {
+      Navigator.pop(context); // Close the drawer
+      return; // Do not navigate again to the same screen
+    }
+
+    setState(() {
+      _drawerSelection = currentDrawerSelection;
+    });
+
+
+    // Navigate to the selected screen
+    switch (currentDrawerSelection) {
+      case DrawerSelection.home:
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => const HomePage(title: "Home")),
+        );
+        break;
+      case DrawerSelection.history:
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => const HistoryScreen(title: "History")),
+        );
+        break;
+      case DrawerSelection.philosophy:
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => const PhilosophyScreen(title: "Philosophy")),
+        );
+        break;
+      case DrawerSelection.exam_guidelines:
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => const ExamGuidelinesScreen(title: "Exam Guidelines")),
+        );
+        break;
+      case DrawerSelection.academic_regulation:
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => const AcademicRegulationsScreen(title: "Academic Regulation")),
+        );
+        break;
+      case DrawerSelection.admission_req:
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => const AdmissionRequirementsScreen(title: "Admission Requirements")),
+        );
+        break;
+      case DrawerSelection.course_duration:
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => const CourseDurationScreen(title: "Course Duration")),
+        );
+        break;
+      case DrawerSelection.grading:
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => const GradingScreen(title: "Admission Requirements")),
+        );
+        break;
+      default:
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => const StaffScreen(title: "Staff")),
+        );
+    }
+
+    // Clear the backstack when navigating to a new screen
+    Navigator.popUntil(context, (route) => route.isFirst);
   }
 
   @override
@@ -71,12 +139,7 @@ class _AppDrawerState extends State<AppDrawer> {
             selected: _drawerSelection  == DrawerSelection.home,
             selectedTileColor: _drawerSelection == DrawerSelection.home ? Theme.of(context).highlightColor: null,
             onTap: (){
-              Navigator.pop(context);
               _setSelectedNavItem(DrawerSelection.home); // Update the selected item
-              Navigator.pushReplacement(context,
-                  MaterialPageRoute(builder: (context) {
-                    return const HomePage(title: "Home");
-                  }));
             },
           ),
           ListTile(
@@ -85,13 +148,7 @@ class _AppDrawerState extends State<AppDrawer> {
             selected: _drawerSelection == DrawerSelection.history,
             selectedTileColor: Theme.of(context).highlightColor,
             onTap: (){
-              Navigator.pop(context);
               _setSelectedNavItem(DrawerSelection.history);
-              Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) {
-                    return const HistoryScreen(title: "History");
-    })
-              );
             },
           ),ListTile(
             leading: const ListTileIcon(icon: Icons.sticky_note_2),
@@ -99,16 +156,7 @@ class _AppDrawerState extends State<AppDrawer> {
             selected: _drawerSelection == DrawerSelection.philosophy,
             selectedTileColor: Theme.of(context).highlightColor,
             onTap: (){
-              Navigator.pop(context);
               _setSelectedNavItem(DrawerSelection.philosophy);
-              Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) {
-
-                    return const PhilosophyScreen(title: "Philosophy");
-                  }
-                  )
-              );
-
             },
           ),ListTile(
             leading: const ListTileIcon(icon: Icons.menu_book),
@@ -116,14 +164,7 @@ class _AppDrawerState extends State<AppDrawer> {
             selected: _drawerSelection == DrawerSelection.exam_guidelines,
             selectedTileColor: Theme.of(context).highlightColor,
             onTap: (){
-              Navigator.pop(context);
               _setSelectedNavItem(DrawerSelection.exam_guidelines);
-              Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) {
-                    return const ExamGuidelinesScreen(title: "Exam Guidelines");
-                    }
-                    )
-              );
             },
           ),ListTile(
             leading: const ListTileIcon(icon: Icons.safety_check),
@@ -131,33 +172,15 @@ class _AppDrawerState extends State<AppDrawer> {
             selected: _drawerSelection == DrawerSelection.academic_regulation,
             selectedTileColor: Theme.of(context).highlightColor,
             onTap: (){
-              Navigator.pop(context);
               _setSelectedNavItem(DrawerSelection.academic_regulation);
-              Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) {
-                    return const AcademicRegulationsScreen(
-                      title: "Academic Regulations"
-                  );
-                  }
-                  )
-              );
             },
           ),ListTile(
             leading: const ListTileIcon(icon: Icons.settings),
             title: const ListTileText(text: "Admission Requirements"),
-            selected: _drawerSelection == DrawerSelection.adission_req,
+            selected: _drawerSelection == DrawerSelection.admission_req,
             selectedTileColor: Theme.of(context).highlightColor,
             onTap: (){
-              Navigator.pop(context);
               _setSelectedNavItem(DrawerSelection.academic_regulation);
-              Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) {
-                    return const AdmissionRequirementsScreen(
-                      title: "Academic Requirements"
-                  );
-                  }
-                  )
-              );
             },
           ),ListTile(
             leading: const ListTileIcon(icon: Icons.access_time),
@@ -165,16 +188,7 @@ class _AppDrawerState extends State<AppDrawer> {
             selected: _drawerSelection == DrawerSelection.course_duration,
             selectedTileColor: Theme.of(context).highlightColor,
             onTap: (){
-              Navigator.pop(context);
               _setSelectedNavItem(DrawerSelection.course_duration);
-              Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) {
-                    return const CourseDurationScreen(
-                      title: "Course Duration"
-                  );
-                  }
-                  )
-              );
             },
           ),
           ListTile(
@@ -183,15 +197,7 @@ class _AppDrawerState extends State<AppDrawer> {
             selected: _drawerSelection == DrawerSelection.grading,
             selectedTileColor: Theme.of(context).highlightColor,
             onTap: (){
-              Navigator.pop(context);
               _setSelectedNavItem(DrawerSelection.grading);
-              Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) {
-                    return const GradingScreen(title: "Grading");
-                    }
-                    )
-              );
-
             },
           ),ListTile(
             leading: const ListTileIcon(icon: Icons.person),
@@ -200,13 +206,6 @@ class _AppDrawerState extends State<AppDrawer> {
             selectedTileColor: Theme.of(context).highlightColor,
             onTap: (){
               _setSelectedNavItem(DrawerSelection.staff);
-              Navigator.pop(context);
-              Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) {
-                    return const StaffScreen(title: "Staff & Management");
-                  }
-                  )
-              );
             },
           ),
 
