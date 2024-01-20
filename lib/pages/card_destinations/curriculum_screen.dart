@@ -1,7 +1,8 @@
+import 'package:dcce_handbook/util/DrawerSelection.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import '../../util/strings.dart';
-import '../../widgets/build_drawer.dart';
+import '../../widgets/app_drawer.dart';
 import '../../widgets/common_app_bar.dart';
 
 class CurriculumScreen extends StatefulWidget {
@@ -12,7 +13,7 @@ class CurriculumScreen extends StatefulWidget {
   State createState() => CurriculumScreenState();
 }
 
-class CurriculumScreenState extends State<CurriculumScreen>{
+class CurriculumScreenState extends State<CurriculumScreen> {
   late final WebViewController webViewController;
   late Color backgroundColor; // Store the background color
 
@@ -21,7 +22,6 @@ class CurriculumScreenState extends State<CurriculumScreen>{
     super.initState();
     webViewController = WebViewController();
   }
-
 
   @override
   void didChangeDependencies() {
@@ -38,47 +38,40 @@ class CurriculumScreenState extends State<CurriculumScreen>{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CommonAppBar(title: widget.title),
-      drawer: buildDrawer(context),
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Text("THE CURRICULUM:",
-                style: Theme
-                    .of(context)
-                    .textTheme
-                    .headlineLarge
-                    ?.copyWith(
-                    fontFamily: "montserrat"
-                )
-            ),
-            const Text(
-              "Curriculum of the Department, which clearly indicates the course codes, course titles, course units, and structures, as given by the Minimum Academic Standard of the National Universities Commission (NUC-MAS).",
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: SizedBox(
-                height: MediaQuery
-                    .of(context)
-                    .size
-                    .height,
-                child: WebViewWidget(controller: webViewController),
+      body: ListView(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              "THE CURRICULUM:",
+              style: Theme.of(context).textTheme.headlineLarge?.copyWith(
+                fontFamily: "montserrat",
               ),
             ),
-          ],
-        ),
+          ),
+          const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Text(
+              "Curriculum of the Department, which clearly indicates the course codes, course titles, course units, and structures, as given by the Minimum Academic Standard of the National Universities Commission (NUC-MAS).",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontFamily: "montserrat",
+              ),
+            ),
+          ),
+          SizedBox(
+            height: MediaQuery.of(context).size.height,
+            child: WebViewWidget(controller: webViewController),
+          ),
+        ],
       ),
     );
   }
 
-
-  Future<void> _onLoadFlutterAsset(
-      WebViewController controller) async {
+  Future<void> _onLoadFlutterAsset(WebViewController controller) async {
     await controller.loadHtmlString(AppStrings.curriculum);
 
-    // Set the background color after the web page has finished loading
+        // Set the background color after the web page has finished loading
     controller.clearCache(); // Clear cache to ensure styles are applied
     controller.setBackgroundColor(backgroundColor);
     controller.setJavaScriptMode(JavaScriptMode.unrestricted);

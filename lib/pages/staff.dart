@@ -1,7 +1,8 @@
+import 'package:dcce_handbook/util/DrawerSelection.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/build_drawer.dart';
+import '../widgets/app_drawer.dart';
 import '../widgets/common_app_bar.dart';
 
 class StaffScreen extends StatelessWidget {
@@ -11,7 +12,7 @@ class StaffScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CommonAppBar(title: title),
-      drawer: buildDrawer(context),
+      drawer: const AppDrawer(initialSelection: DrawerSelection.staff),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,

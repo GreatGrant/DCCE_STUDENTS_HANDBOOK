@@ -1,8 +1,9 @@
+import 'package:dcce_handbook/util/DrawerSelection.dart';
 import 'package:dcce_handbook/widgets/grid_item.dart';
 import 'package:flutter/material.dart';
 import '../models/level.dart';
 import '../widgets/common_app_bar.dart';
-import '../widgets/build_drawer.dart';
+import '../widgets/app_drawer.dart';
 import 'card_destinations/curriculum_screen.dart';
 import 'card_destinations/final_year_screen.dart';
 import 'card_destinations/first_year_screen.dart';
@@ -25,7 +26,7 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: CommonAppBar(title: widget.title),
-        drawer: buildDrawer(context),
+        drawer: const AppDrawer(initialSelection: DrawerSelection.home),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(

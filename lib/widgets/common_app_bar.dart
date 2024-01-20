@@ -105,8 +105,10 @@ class CommonAppBarState extends State<CommonAppBar>
 
   @override
   void dispose() {
-    _tabController.dispose();
-    super.dispose();
+    if (widget.tabs != null && widget.tabs!.isNotEmpty) {
+      _tabController.dispose();
+      super.dispose();
+    }
   }
 
   void _toggleTheme(BuildContext context, bool isDarkMode) {

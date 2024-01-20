@@ -1,7 +1,8 @@
+import 'package:dcce_handbook/util/DrawerSelection.dart';
 import 'package:dcce_handbook/util/strings.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
-import '../widgets/build_drawer.dart';
+import '../widgets/app_drawer.dart';
 import '../widgets/common_app_bar.dart';
 
 class GradingScreen extends StatefulWidget {
@@ -38,7 +39,7 @@ class GradingScreenState extends State<GradingScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CommonAppBar(title: "Grading"),
-      drawer: buildDrawer(context),
+      drawer: const AppDrawer(initialSelection: DrawerSelection.grading),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
