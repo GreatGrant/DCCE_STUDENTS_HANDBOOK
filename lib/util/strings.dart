@@ -48,7 +48,12 @@ static const String gradingParagraphString = '''To be eligible for the award of 
 A student shall pass an examination if he/she scores a grade of "E" (1.00 Point) or above. A student who absents himself/herself from an examination for a course which he has duly registered without a reason acceptable to SENATE will automatically earn "F" grade for the examination.''';
 
 static const String admissionRequirementHeaderText = "COMPLIANCE WITH ADMISSION REQUIREMENTS:";
-
+static const String admissionRequirement = '''There are three admission procedures into the Department:
+        - Unified Tertiary Matriculation Examination (UTME): Candidates should possess passes at credit level in senior secondary certificate final year examination or GCE “O” Level in five subjects including English Language, Mathematics, Physics, Chemistry and any other science subject at not more than two sittings. In addition to this the applicant should meet the necessary UTME cut off point.</li>
+        - Direct entry: For direct entry into 200 Level, candidates must have passes in Mathematics and Physics at GCE “A” Level or its equivalent. ND and HND with a minimum of upper credit pass are eligible for admission. Candidates must also meet the “O” Level requirement of five credits.
+        - The university operates a remedial programme that prepares candidates for admission such that candidates must pass UTME at cut-off points and also successfully remedy relevant subjects as specified in the UTME and as stipulated by the University for Engineering based courses. 
+  '''
+;
 static const String academicRequirementString = '''The conduct of examination is one of the most engaging assignments of the Department. At the end of each semester, there should be a full examination in each course.
 
   The examination questions cover across all areas of the courses as contained in the course outline or syllabus. This is done to maintain the standard of learning of the Department. About four weeks to the end of every semester, staff set and submit the examination questions of the various courses offered by them. Each staff set papers comprising of questions, model answer and marking scheme, which are sent out to the external examiner for moderation. The moderation remarks are discussed and implemented in a Departmental meeting after which they are typed, parcelled and locked up in the faculty examination office.
@@ -3019,7 +3024,6 @@ const styles = '''
 <style>
     @font-face {
         font-family: 'MontserratRegular';
-        src: url('montserrat_regular.ttf') format('truetype');
         font-weight: normal;
         font-style: normal;
       }

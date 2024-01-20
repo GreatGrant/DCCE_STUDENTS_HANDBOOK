@@ -16,7 +16,7 @@ class AdmissionRequirementsScreen extends StatelessWidget {
       appBar: CommonAppBar(title: title),
         drawer: const AppDrawer(initialSelection: DrawerSelection.admission_req),
         body: const CommonDropCapLayout(
-        paragraph: AppStrings.academicRequirementString,
+        paragraph: AppStrings.admissionRequirement,
       )
     );
   }
