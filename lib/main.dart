@@ -1,3 +1,4 @@
+import 'package:dcce_handbook/onboarding/onboarding_view.dart';
 import 'package:dcce_handbook/pages/home_page.dart';
 import 'package:dcce_handbook/util/theme_provider.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
       child: Consumer<ThemeProvider>(
         builder: (context, themeProvider, child) {
           return MaterialApp(
+            debugShowCheckedModeBanner: false,
             title: 'DCCE Student Handbook',
             theme: ThemeData.light(
               useMaterial3: true,
@@ -31,7 +33,7 @@ class MyApp extends StatelessWidget {
               canvasColor: Colors.grey[900]
             ),
             themeMode: themeProvider.themeMode, // Get theme mode from provider
-            home: const HomePage(title: "Home"),
+            home: const OnboardingView()
           );
         },
       ),

@@ -15,7 +15,8 @@ class CurriculumScreen extends StatefulWidget {
 
 class CurriculumScreenState extends State<CurriculumScreen> {
   late final WebViewController webViewController;
-  late Color backgroundColor; // Store the background color
+  late Color backgroundColor; // Store
+  // the background color
 
   @override
   void initState() {
@@ -61,7 +62,7 @@ class CurriculumScreenState extends State<CurriculumScreen> {
           ),
           SizedBox(
             height: MediaQuery.of(context).size.height,
-            child: WebViewWidget(controller: webViewController),
+            child: SingleChildScrollView(child: WebViewWidget(controller: webViewController)),
           ),
         ],
       ),
