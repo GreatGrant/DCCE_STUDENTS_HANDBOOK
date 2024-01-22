@@ -17,21 +17,21 @@ class OnboardingItem {
         description: "Explore the roots of DCCE's legacy. "
             "Learn about the milestones, achievements, and influential figures that have shaped our department's history. "
             "This knowledge will connect you with the traditions and values that define our academic community",
-        image: 'assets/svg/undraw_book_lover'
+        image: 'assets/svg/undraw_sharing_knowledge.svg'
     ),
     const OnboardingInfo(
         title: "Chart Your Course",
         description: "Navigate through the academic landscape with ease. "
             "From the first year to the final year, our detailed syllabus provides a roadmap for your educational journey. "
             "Get acquainted with the courses, modules, and milestones that will shape your learning experience.",
-        image: 'assets/svg/undraw_agrre.svg'
+        image: 'assets/svg/undraw_coffee_with_friends.svg'
     ),
     const OnboardingInfo(
         title:  "Embrace Our Vision",
         description:  "Immerse yourself in the core philosophy that drives DCCE. "
             "Understand our commitment to academic excellence, innovation, and personal growth. "
             "This philosophy forms the foundation of your education, preparing you for a successful and fulfilling future.",
-    image: 'assets/svg/programmer.svg'
+    image: 'assets/svg/undraw_programmer.svg'
     )
   ];
   
