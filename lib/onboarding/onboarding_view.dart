@@ -104,6 +104,7 @@ class _OnboardingViewState extends State<OnboardingView>{
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
+        color: Colors.deepPurple
       ),
       width: MediaQuery.of(context).size.width * .9,
       height: 55,

@@ -7,6 +7,7 @@ import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
   final sharedPref = await SharedPreferences.getInstance();
   final isOnboarded = sharedPref.getBool(sharedPrefKey)??false;
   runApp(MyApp(isOnboarded: isOnboarded));
