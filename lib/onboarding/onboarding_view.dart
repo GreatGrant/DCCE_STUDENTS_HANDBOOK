@@ -1,7 +1,8 @@
 import 'package:dcce_handbook/onboarding/onboarding_item.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+
+import 'onboarding_info.dart';
 
 class OnboardingView extends StatefulWidget {
   const OnboardingView({super.key});
@@ -10,9 +11,18 @@ class OnboardingView extends StatefulWidget {
   State<OnboardingView> createState() => _OnboardingViewState();
 }
 
-class _OnboardingViewState extends State<OnboardingView> {
-  final pageController = PageController();
-  final onboardingItems = OnboardingItem.items;
+class _OnboardingViewState extends State<OnboardingView>{
+  late PageController pageController;
+  late List<OnboardingInfo> onboardingItems;
+
+
+  @override
+  void initState() {
+    super.initState();
+    pageController = PageController();
+    onboardingItems = OnboardingItem.items;
+
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -22,10 +32,11 @@ class _OnboardingViewState extends State<OnboardingView> {
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         color: Theme.of(context).canvasColor,
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             //Skip button
-            TextButton(onPressed: (){}, child: const Text("Skip")),
-
+            TextButton(onPressed: ()=> pageController.jumpToPage(onboardingItems.length - 1),
+                child: const Text("Skip")),
             //indicator
             SmoothPageIndicator(
               controller: pageController,
@@ -36,7 +47,10 @@ class _OnboardingViewState extends State<OnboardingView> {
 
             ),
             // Next button
-            TextButton(onPressed: (){}, child: const Text("Next"))
+            TextButton(
+                onPressed: ()=> pageController.nextPage(duration: const Duration(milliseconds: 6000),
+                        curve: Curves.easeIn),
+                child: const Text("Next"))
           ],
         ),
       ),
@@ -49,7 +63,9 @@ class _OnboardingViewState extends State<OnboardingView> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SvgPicture.asset(onboardingItems[index].image),
+                Image.asset(
+                    onboardingItems[index].image,
+                ),
                 Text(onboardingItems[index].title,
                   style: const TextStyle(
                     fontWeight: FontWeight.bold,

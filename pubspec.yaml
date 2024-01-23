@@ -23,6 +23,8 @@ dependencies:
   path_provider: ^2.1.1
   provider: ^6.1.1
   smooth_page_indicator: ^1.1.0
+  gif: ^2.3.0
+#  flutter_gif: ^0.0.4
 
 dev_dependencies:
   flutter_test:
@@ -50,6 +52,7 @@ flutter:
   assets:
     - assets/svg/
     - assets/images/
+    - assets/onboarding_gif/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
