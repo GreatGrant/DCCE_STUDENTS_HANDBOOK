@@ -90,10 +90,13 @@ class CommonAppBarState extends State<CommonAppBar>
       ],
       bottom: widget.tabs != null && widget.tabs!.isNotEmpty
           ? PreferredSize(
-        preferredSize: const Size.fromHeight(48.0), // Adjust the height as needed
+        preferredSize: const Size.fromHeight(48.0),
         child: Padding(
           padding: const EdgeInsets.only(top: 8.0),
           child: TabBar(
+            indicatorColor: const Color.fromARGB(255, 38, 48, 145),
+            labelColor: Theme.of(context).textTheme.displaySmall?.color,
+            unselectedLabelColor: Theme.of(context).textTheme.displaySmall?.color,
             tabs: widget.tabs!,
             controller: _tabController,
           ),
@@ -107,8 +110,9 @@ class CommonAppBarState extends State<CommonAppBar>
   void dispose() {
     if (widget.tabs != null && widget.tabs!.isNotEmpty) {
       _tabController.dispose();
-      super.dispose();
     }
+    super.dispose();
+
   }
 
   void _toggleTheme(BuildContext context, bool isDarkMode) {
