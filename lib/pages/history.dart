@@ -4,16 +4,26 @@ import 'package:flutter/material.dart';
 import 'package:dcce_handbook/util/strings.dart';
 import '../widgets/app_drawer.dart';
 import '../widgets/common_app_bar.dart';
+import '../widgets/show_back_dialog.dart';
 
 class HistoryScreen extends StatelessWidget {
   const HistoryScreen({super.key, required this.title});
   final String title;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: CommonAppBar(title: title),
-      drawer: const AppDrawer(initialSelection: DrawerSelection.history),
-      body: const CommonDropCapLayout(paragraph: AppStrings.historyString)
+    return PopScope(
+      canPop: false,
+      onPopInvoked: (bool didPop) {
+        if (didPop) {
+          return;
+        }
+        showBackDialog(context);
+      },
+      child: Scaffold(
+        appBar: CommonAppBar(title: title),
+        drawer: const AppDrawer(initialSelection: DrawerSelection.history),
+        body: const CommonDropCapLayout(paragraph: AppStrings.historyString)
+      ),
     );
   }
 }

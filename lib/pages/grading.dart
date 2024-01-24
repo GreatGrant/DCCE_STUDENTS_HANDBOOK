@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import '../widgets/app_drawer.dart';
 import '../widgets/common_app_bar.dart';
+import '../widgets/show_back_dialog.dart';
 
 class GradingScreen extends StatefulWidget {
   const GradingScreen({super.key, required this.title});
@@ -37,29 +38,38 @@ class GradingScreenState extends State<GradingScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const CommonAppBar(title: "Grading"),
-      drawer: const AppDrawer(initialSelection: DrawerSelection.grading),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Padding(
-              padding: EdgeInsets.all(16.0),
-              child: Text(
-                AppStrings.gradingParagraphString,
-                style: TextStyle(fontSize: 16, fontFamily: "montserrat"),
+    return PopScope(
+      canPop: false,
+      onPopInvoked: (bool didPop) {
+        if (didPop) {
+          return;
+        }
+        showBackDialog(context);
+      },
+      child: Scaffold(
+        appBar: const CommonAppBar(title: "Grading"),
+        drawer: const AppDrawer(initialSelection: DrawerSelection.grading),
+        body: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Padding(
+                padding: EdgeInsets.all(16.0),
+                child: Text(
+                  AppStrings.gradingParagraphString,
+                  style: TextStyle(fontSize: 16, fontFamily: "montserrat"),
+                ),
               ),
-            ),
-            const SizedBox(height: 16),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: SizedBox(
-                height: MediaQuery.of(context).size.height - 400, // Adjust the height as needed
-                child: WebViewWidget(controller: _controller),
-            ),
-            ),
-          ],
+              const SizedBox(height: 16),
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: SizedBox(
+                  height: MediaQuery.of(context).size.height - 400, // Adjust the height as needed
+                  child: WebViewWidget(controller: _controller),
+              ),
+              ),
+            ],
+          ),
         ),
       ),
     );
