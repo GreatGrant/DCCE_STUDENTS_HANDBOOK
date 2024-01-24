@@ -95,7 +95,6 @@ class CommonAppBarState extends State<CommonAppBar>
           padding: const EdgeInsets.only(top: 8.0),
           child: TabBar(
             indicatorColor: const Color.fromARGB(255, 38, 48, 145),
-            labelColor: Theme.of(context).textTheme.displaySmall?.color,
             unselectedLabelColor: Theme.of(context).textTheme.displaySmall?.color,
             tabs: widget.tabs!,
             controller: _tabController,

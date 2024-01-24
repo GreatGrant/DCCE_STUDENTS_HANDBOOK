@@ -135,16 +135,16 @@ class _AppDrawerState extends State<AppDrawer> {
           ),
           ListTile(
             leading: const ListTileIcon(icon: Icons.home),
-            title: const ListTileText(text: "Home"),
+            title: ListTileText(text: "Home", drawerSelection: _drawerSelection, currentSelection: DrawerSelection.home,),
             selected: _drawerSelection  == DrawerSelection.home,
-            selectedTileColor: _drawerSelection == DrawerSelection.home ? Theme.of(context).highlightColor: null,
+            selectedTileColor: _drawerSelection == DrawerSelection.home ? Colors.deepPurple.shade100: null,
             onTap: (){
               _setSelectedNavItem(DrawerSelection.home); // Update the selected item
             },
           ),
           ListTile(
             leading: const ListTileIcon(icon: Icons.history_edu),
-            title: const ListTileText(text: "History"),
+            title: ListTileText(text: "History", drawerSelection: _drawerSelection, currentSelection: DrawerSelection.history),
             selected: _drawerSelection == DrawerSelection.history,
             selectedTileColor: Theme.of(context).highlightColor,
             onTap: (){
@@ -152,7 +152,7 @@ class _AppDrawerState extends State<AppDrawer> {
             },
           ),ListTile(
             leading: const ListTileIcon(icon: Icons.sticky_note_2),
-            title: const ListTileText(text: "Philosophy"),
+            title: ListTileText(text: "Philosophy", drawerSelection: _drawerSelection, currentSelection: DrawerSelection.philosophy),
             selected: _drawerSelection == DrawerSelection.philosophy,
             selectedTileColor: Theme.of(context).highlightColor,
             onTap: (){
@@ -160,7 +160,7 @@ class _AppDrawerState extends State<AppDrawer> {
             },
           ),ListTile(
             leading: const ListTileIcon(icon: Icons.menu_book),
-            title: const ListTileText(text: "Exam Guidelines"),
+            title: ListTileText(text: "Exam Guidelines", drawerSelection: _drawerSelection, currentSelection: DrawerSelection.exam_guidelines),
             selected: _drawerSelection == DrawerSelection.exam_guidelines,
             selectedTileColor: Theme.of(context).highlightColor,
             onTap: (){
@@ -168,7 +168,7 @@ class _AppDrawerState extends State<AppDrawer> {
             },
           ),ListTile(
             leading: const ListTileIcon(icon: Icons.safety_check),
-            title: const ListTileText(text: "Academic Regulation"),
+            title: ListTileText(text: "Academic Regulation", drawerSelection: _drawerSelection,currentSelection: DrawerSelection.academic_regulation),
             selected: _drawerSelection == DrawerSelection.academic_regulation,
             selectedTileColor: Theme.of(context).highlightColor,
             onTap: (){
@@ -176,7 +176,7 @@ class _AppDrawerState extends State<AppDrawer> {
             },
           ),ListTile(
             leading: const ListTileIcon(icon: Icons.settings),
-            title: const ListTileText(text: "Admission Requirements"),
+            title: ListTileText(text: "Admission Requirements", drawerSelection: _drawerSelection, currentSelection: DrawerSelection.admission_req),
             selected: _drawerSelection == DrawerSelection.admission_req,
             selectedTileColor: Theme.of(context).highlightColor,
             onTap: (){
@@ -184,7 +184,7 @@ class _AppDrawerState extends State<AppDrawer> {
             },
           ),ListTile(
             leading: const ListTileIcon(icon: Icons.access_time),
-            title: const ListTileText(text: "Course Duration"),
+            title: ListTileText(text: "Course Duration", drawerSelection: _drawerSelection, currentSelection: DrawerSelection.course_duration),
             selected: _drawerSelection == DrawerSelection.course_duration,
             selectedTileColor: Theme.of(context).highlightColor,
             onTap: (){
@@ -193,7 +193,7 @@ class _AppDrawerState extends State<AppDrawer> {
           ),
           ListTile(
             leading: const ListTileIcon(icon: Icons.rate_review),
-            title: const ListTileText(text: "Grading"),
+            title: ListTileText(text: "Grading", drawerSelection: _drawerSelection, currentSelection: DrawerSelection.grading),
             selected: _drawerSelection == DrawerSelection.grading,
             selectedTileColor: Theme.of(context).highlightColor,
             onTap: (){
@@ -201,7 +201,7 @@ class _AppDrawerState extends State<AppDrawer> {
             },
           ),ListTile(
             leading: const ListTileIcon(icon: Icons.person),
-            title: const ListTileText(text: "Staff & Management"),
+            title: ListTileText(text: "Staff & Management", drawerSelection: _drawerSelection, currentSelection: DrawerSelection.staff),
             selected: _drawerSelection == DrawerSelection.staff,
             selectedTileColor: Theme.of(context).highlightColor,
             onTap: (){

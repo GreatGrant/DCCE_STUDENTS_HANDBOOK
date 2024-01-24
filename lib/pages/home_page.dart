@@ -81,12 +81,6 @@ class HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text("Academic Levels",
-                    style: Theme.of(context).textTheme.headlineLarge?.copyWith(
-                        fontFamily: "montserrat"
-                    )
-                ),
-                const SizedBox(height: 8,),
                 Text("Select A Level Below To See Its Syllabus",
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                         fontFamily: "montserrat"
