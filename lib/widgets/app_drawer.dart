@@ -137,7 +137,7 @@ class _AppDrawerState extends State<AppDrawer> {
             leading: ListTileIcon(
                 icon: Icons.home,
                 drawerSelection: _drawerSelection,
-                currentSelection: DrawerSelection.staff
+                currentSelection: DrawerSelection.home
             ),
             title: ListTileText(
               text: "Home", drawerSelection: _drawerSelection,

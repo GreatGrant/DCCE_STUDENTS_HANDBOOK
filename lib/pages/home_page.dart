@@ -49,7 +49,6 @@ class HomePageState extends State<HomePage> {
               child: const Text('Leave'),
               onPressed: () {
                 Navigator.pop(context);
-                Navigator.pop(context);
 
                 // Exit app
                 SystemNavigator.pop();
@@ -118,22 +117,22 @@ class HomePageState extends State<HomePage> {
 void _navigateToDestination(BuildContext context, int index){
   switch(index){
     case 0:
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const FirstYearScreen(title: 'First Year',)));
+      Navigator.push(context, MaterialPageRoute(builder: (context) => const FirstYearScreen(title: 'First Year',)));
       break;
     case 1:
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const SecondYearScreen(title: 'Second Year',)));
+      Navigator.push(context, MaterialPageRoute(builder: (context) => const SecondYearScreen(title: 'Second Year',)));
       break;
     case 2:
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const ThirdYearScreen(title: 'Third Year',)));
+      Navigator.push(context, MaterialPageRoute(builder: (context) => const ThirdYearScreen(title: 'Third Year',)));
       break;
     case 3:
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const FourthYearScreen(title: 'Fourth Year',)));
+      Navigator.push(context, MaterialPageRoute(builder: (context) => const FourthYearScreen(title: 'Fourth Year',)));
       break;
     case 4:
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const FinalYearScreen(title: 'Final Year',)));
+      Navigator.push(context, MaterialPageRoute(builder: (context) => const FinalYearScreen(title: 'Final Year',)));
       break;
     default:
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const CurriculumScreen(title: 'Syllabus',)));
+      Navigator.push(context, MaterialPageRoute(builder: (context) => const CurriculumScreen(title: 'Syllabus',)));
   }
 
 }
