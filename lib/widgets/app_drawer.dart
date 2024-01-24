@@ -134,8 +134,15 @@ class _AppDrawerState extends State<AppDrawer> {
             ),
           ),
           ListTile(
-            leading: const ListTileIcon(icon: Icons.home),
-            title: ListTileText(text: "Home", drawerSelection: _drawerSelection, currentSelection: DrawerSelection.home,),
+            leading: ListTileIcon(
+                icon: Icons.home,
+                drawerSelection: _drawerSelection,
+                currentSelection: DrawerSelection.staff
+            ),
+            title: ListTileText(
+              text: "Home", drawerSelection: _drawerSelection,
+              currentSelection: DrawerSelection.home
+            ),
             selected: _drawerSelection  == DrawerSelection.home,
             selectedTileColor: _drawerSelection == DrawerSelection.home ? Colors.deepPurple.shade100: null,
             onTap: (){
@@ -143,31 +150,59 @@ class _AppDrawerState extends State<AppDrawer> {
             },
           ),
           ListTile(
-            leading: const ListTileIcon(icon: Icons.history_edu),
-            title: ListTileText(text: "History", drawerSelection: _drawerSelection, currentSelection: DrawerSelection.history),
+            leading: ListTileIcon(
+                icon: Icons.history_edu,
+                drawerSelection: _drawerSelection,
+                currentSelection: DrawerSelection.history
+            ),
+            title: ListTileText(
+                text: "History",
+                drawerSelection: _drawerSelection,
+                currentSelection: DrawerSelection.history
+            ),
             selected: _drawerSelection == DrawerSelection.history,
             selectedTileColor: Theme.of(context).highlightColor,
             onTap: (){
               _setSelectedNavItem(DrawerSelection.history);
             },
           ),ListTile(
-            leading: const ListTileIcon(icon: Icons.sticky_note_2),
-            title: ListTileText(text: "Philosophy", drawerSelection: _drawerSelection, currentSelection: DrawerSelection.philosophy),
+            leading: ListTileIcon(
+                icon: Icons.sticky_note_2,
+                drawerSelection: _drawerSelection,
+                currentSelection: DrawerSelection.philosophy
+            ),
+            title: ListTileText(
+                text: "Philosophy",
+                drawerSelection: _drawerSelection,
+                currentSelection: DrawerSelection.philosophy
+            ),
             selected: _drawerSelection == DrawerSelection.philosophy,
             selectedTileColor: Theme.of(context).highlightColor,
             onTap: (){
               _setSelectedNavItem(DrawerSelection.philosophy);
             },
           ),ListTile(
-            leading: const ListTileIcon(icon: Icons.menu_book),
-            title: ListTileText(text: "Exam Guidelines", drawerSelection: _drawerSelection, currentSelection: DrawerSelection.exam_guidelines),
+            leading:ListTileIcon(
+                icon: Icons.menu_book,
+                drawerSelection: _drawerSelection,
+                currentSelection: DrawerSelection.exam_guidelines
+            ),
+            title: ListTileText(
+                text: "Exam Guidelines",
+                drawerSelection: _drawerSelection,
+                currentSelection: DrawerSelection.exam_guidelines
+            ),
             selected: _drawerSelection == DrawerSelection.exam_guidelines,
             selectedTileColor: Theme.of(context).highlightColor,
             onTap: (){
               _setSelectedNavItem(DrawerSelection.exam_guidelines);
             },
           ),ListTile(
-            leading: const ListTileIcon(icon: Icons.safety_check),
+            leading: ListTileIcon(
+                icon: Icons.safety_check,
+                drawerSelection: _drawerSelection,
+                currentSelection: DrawerSelection.academic_regulation
+            ),
             title: ListTileText(text: "Academic Regulation", drawerSelection: _drawerSelection,currentSelection: DrawerSelection.academic_regulation),
             selected: _drawerSelection == DrawerSelection.academic_regulation,
             selectedTileColor: Theme.of(context).highlightColor,
@@ -175,15 +210,23 @@ class _AppDrawerState extends State<AppDrawer> {
               _setSelectedNavItem(DrawerSelection.academic_regulation);
             },
           ),ListTile(
-            leading: const ListTileIcon(icon: Icons.settings),
-            title: ListTileText(text: "Admission Requirements", drawerSelection: _drawerSelection, currentSelection: DrawerSelection.admission_req),
+            leading: ListTileIcon(
+                icon: Icons.settings,
+                drawerSelection: _drawerSelection,
+                currentSelection: DrawerSelection.admission_req),
+            title: ListTileText(text: "Admission Requirements",
+                drawerSelection: _drawerSelection,
+                currentSelection: DrawerSelection.admission_req),
             selected: _drawerSelection == DrawerSelection.admission_req,
             selectedTileColor: Theme.of(context).highlightColor,
             onTap: (){
               _setSelectedNavItem(DrawerSelection.academic_regulation);
             },
           ),ListTile(
-            leading: const ListTileIcon(icon: Icons.access_time),
+            leading: ListTileIcon(
+                icon: Icons.access_time,
+                drawerSelection: _drawerSelection,
+                currentSelection: DrawerSelection.academic_regulation),
             title: ListTileText(text: "Course Duration", drawerSelection: _drawerSelection, currentSelection: DrawerSelection.course_duration),
             selected: _drawerSelection == DrawerSelection.course_duration,
             selectedTileColor: Theme.of(context).highlightColor,
@@ -192,7 +235,10 @@ class _AppDrawerState extends State<AppDrawer> {
             },
           ),
           ListTile(
-            leading: const ListTileIcon(icon: Icons.rate_review),
+            leading: ListTileIcon(
+                icon: Icons.rate_review,
+                drawerSelection: _drawerSelection,
+                currentSelection: DrawerSelection.grading),
             title: ListTileText(text: "Grading", drawerSelection: _drawerSelection, currentSelection: DrawerSelection.grading),
             selected: _drawerSelection == DrawerSelection.grading,
             selectedTileColor: Theme.of(context).highlightColor,
@@ -200,7 +246,10 @@ class _AppDrawerState extends State<AppDrawer> {
               _setSelectedNavItem(DrawerSelection.grading);
             },
           ),ListTile(
-            leading: const ListTileIcon(icon: Icons.person),
+            leading: ListTileIcon(icon: Icons.person,
+              drawerSelection: _drawerSelection,
+              currentSelection: DrawerSelection.staff
+            ),
             title: ListTileText(text: "Staff & Management", drawerSelection: _drawerSelection, currentSelection: DrawerSelection.staff),
             selected: _drawerSelection == DrawerSelection.staff,
             selectedTileColor: Theme.of(context).highlightColor,
