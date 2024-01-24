@@ -20,6 +20,7 @@ class ListTileText extends StatelessWidget {
       text,
       style: TextStyle(
           fontFamily: "montserrat",
+          fontWeight: drawerSelection == currentSelection ? FontWeight.bold : FontWeight.normal,
           color: drawerSelection == currentSelection
               ? Colors.deepPurple.shade700 // Selected color
               :Theme.of(context).textTheme.displaySmall?.color, // Default text color

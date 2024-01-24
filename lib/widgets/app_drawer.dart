@@ -161,7 +161,7 @@ class _AppDrawerState extends State<AppDrawer> {
                 currentSelection: DrawerSelection.history
             ),
             selected: _drawerSelection == DrawerSelection.history,
-            selectedTileColor: Theme.of(context).highlightColor,
+            selectedTileColor: _drawerSelection == DrawerSelection.history ? Colors.deepPurple.shade100: null,
             onTap: (){
               _setSelectedNavItem(DrawerSelection.history);
             },
@@ -177,7 +177,7 @@ class _AppDrawerState extends State<AppDrawer> {
                 currentSelection: DrawerSelection.philosophy
             ),
             selected: _drawerSelection == DrawerSelection.philosophy,
-            selectedTileColor: Theme.of(context).highlightColor,
+            selectedTileColor: _drawerSelection == DrawerSelection.philosophy ? Colors.deepPurple.shade100: null,
             onTap: (){
               _setSelectedNavItem(DrawerSelection.philosophy);
             },
@@ -193,7 +193,7 @@ class _AppDrawerState extends State<AppDrawer> {
                 currentSelection: DrawerSelection.exam_guidelines
             ),
             selected: _drawerSelection == DrawerSelection.exam_guidelines,
-            selectedTileColor: Theme.of(context).highlightColor,
+            selectedTileColor: _drawerSelection == DrawerSelection.exam_guidelines ? Colors.deepPurple.shade100: null,
             onTap: (){
               _setSelectedNavItem(DrawerSelection.exam_guidelines);
             },
@@ -205,7 +205,7 @@ class _AppDrawerState extends State<AppDrawer> {
             ),
             title: ListTileText(text: "Academic Regulation", drawerSelection: _drawerSelection,currentSelection: DrawerSelection.academic_regulation),
             selected: _drawerSelection == DrawerSelection.academic_regulation,
-            selectedTileColor: Theme.of(context).highlightColor,
+            selectedTileColor: _drawerSelection == DrawerSelection.academic_regulation ? Colors.deepPurple.shade100: null,
             onTap: (){
               _setSelectedNavItem(DrawerSelection.academic_regulation);
             },
@@ -218,7 +218,7 @@ class _AppDrawerState extends State<AppDrawer> {
                 drawerSelection: _drawerSelection,
                 currentSelection: DrawerSelection.admission_req),
             selected: _drawerSelection == DrawerSelection.admission_req,
-            selectedTileColor: Theme.of(context).highlightColor,
+            selectedTileColor: _drawerSelection == DrawerSelection.admission_req ? Colors.deepPurple.shade100: null,
             onTap: (){
               _setSelectedNavItem(DrawerSelection.academic_regulation);
             },
@@ -229,7 +229,7 @@ class _AppDrawerState extends State<AppDrawer> {
                 currentSelection: DrawerSelection.academic_regulation),
             title: ListTileText(text: "Course Duration", drawerSelection: _drawerSelection, currentSelection: DrawerSelection.course_duration),
             selected: _drawerSelection == DrawerSelection.course_duration,
-            selectedTileColor: Theme.of(context).highlightColor,
+            selectedTileColor: _drawerSelection == DrawerSelection.course_duration ? Colors.deepPurple.shade100: null,
             onTap: (){
               _setSelectedNavItem(DrawerSelection.course_duration);
             },
@@ -241,7 +241,7 @@ class _AppDrawerState extends State<AppDrawer> {
                 currentSelection: DrawerSelection.grading),
             title: ListTileText(text: "Grading", drawerSelection: _drawerSelection, currentSelection: DrawerSelection.grading),
             selected: _drawerSelection == DrawerSelection.grading,
-            selectedTileColor: Theme.of(context).highlightColor,
+            selectedTileColor: _drawerSelection == DrawerSelection.grading ? Colors.deepPurple.shade100: null,
             onTap: (){
               _setSelectedNavItem(DrawerSelection.grading);
             },
@@ -252,7 +252,8 @@ class _AppDrawerState extends State<AppDrawer> {
             ),
             title: ListTileText(text: "Staff & Management", drawerSelection: _drawerSelection, currentSelection: DrawerSelection.staff),
             selected: _drawerSelection == DrawerSelection.staff,
-            selectedTileColor: Theme.of(context).highlightColor,
+            selectedTileColor: _drawerSelection == DrawerSelection.staff ? Colors.deepPurple.shade100: null,
+
             onTap: (){
               _setSelectedNavItem(DrawerSelection.staff);
             },

@@ -18,9 +18,9 @@ class ListTileIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return IconTheme(
       data: IconThemeData(
-        color: drawerSelection == DrawerSelection.home
+        color: drawerSelection == currentSelection
             ? Colors.deepPurple.shade700 // Selected color
-            : Theme.of(context).iconTheme.color, // Default icon color
+            : Theme.of(context).textTheme.displaySmall?.color, // Default icon color
       ),
       child: Icon(icon),
     );
