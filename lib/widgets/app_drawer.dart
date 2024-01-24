@@ -220,14 +220,18 @@ class _AppDrawerState extends State<AppDrawer> {
             selected: _drawerSelection == DrawerSelection.admission_req,
             selectedTileColor: _drawerSelection == DrawerSelection.admission_req ? Colors.deepPurple.shade100: null,
             onTap: (){
-              _setSelectedNavItem(DrawerSelection.academic_regulation);
+              _setSelectedNavItem(DrawerSelection.admission_req);
             },
           ),ListTile(
             leading: ListTileIcon(
                 icon: Icons.access_time,
                 drawerSelection: _drawerSelection,
                 currentSelection: DrawerSelection.academic_regulation),
-            title: ListTileText(text: "Course Duration", drawerSelection: _drawerSelection, currentSelection: DrawerSelection.course_duration),
+            title: ListTileText(
+                text: "Course Duration",
+                drawerSelection: _drawerSelection,
+                currentSelection: DrawerSelection.course_duration
+            ),
             selected: _drawerSelection == DrawerSelection.course_duration,
             selectedTileColor: _drawerSelection == DrawerSelection.course_duration ? Colors.deepPurple.shade100: null,
             onTap: (){
@@ -250,15 +254,17 @@ class _AppDrawerState extends State<AppDrawer> {
               drawerSelection: _drawerSelection,
               currentSelection: DrawerSelection.staff
             ),
-            title: ListTileText(text: "Staff & Management", drawerSelection: _drawerSelection, currentSelection: DrawerSelection.staff),
+            title: ListTileText(
+                text: "Staff & Management",
+                drawerSelection: _drawerSelection,
+                currentSelection: DrawerSelection.staff
+            ),
             selected: _drawerSelection == DrawerSelection.staff,
-            selectedTileColor: _drawerSelection == DrawerSelection.staff ? Colors.deepPurple.shade100: null,
-
+            selectedTileColor: _drawerSelection == DrawerSelection.staff ? Colors.deepPurple.shade200: null,
             onTap: (){
               _setSelectedNavItem(DrawerSelection.staff);
             },
           ),
-
         ],
       ),
     );
