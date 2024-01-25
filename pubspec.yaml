@@ -20,11 +20,20 @@ dependencies:
   flutter_svg: ^2.0.9
   drop_cap_text: ^1.1.3
   webview_flutter: ^4.2.2
-  path_provider: ^2.1.1
   provider: ^6.1.1
   smooth_page_indicator: ^1.1.0
   shared_preferences: ^2.2.2
-#  flutter_gif: ^0.0.4
+  flutter_native_splash: ^2.3.9
+
+flutter_native_splash:
+  #  color: "#ffffff"
+  image: assets/images/logo.png
+  background_image: assets/images/splash_bg.png
+
+  android_12:
+    image: assets/images/logo.png
+    icon_background_color: "#ffffff"
+    icon_background_color_dark: "#121212"
 
 dev_dependencies:
   flutter_test:
