@@ -1,4 +1,14 @@
 class AppStrings{
+  static const String staffCourseContent = '''The Department of Computer and Communication Engineering, a full academic Department, is headed by a Coordinator who is the Head of Department.
+  
+  He is appointed by the Vice-Chancellor based on the results of election, every two years, conducted by Academic members of Staff of the Department.
+  
+  The Head of Department is assisted by administrative staff comprising the Departmental Secretary and two office assistants. The Head of Department is also supported by the Academic Staff, Technologists and other Technical Staff.
+  
+  Staff are broadly grouped and developed along two specializations which are: Computer Engineering and Communications Engineering.
+  At the beginning of each session, duties are assigned to members of staff of the Department.  All Academic matters are discussed at the meeting of Academic Staff. Decisions and recommendations are forwarded to the faculty board for further input and to Senate for final decision.
+  ''';
+
   static const String historyTitle = "HISTORY OF THE DEPARTMENT:";
   static const String historyString = '''The Department of Computer and Communications Engineering was approved in 2011 to offer courses in Computer and Communications Engineering in the Abubakar Tafawa Balewa University, Bauchi. The Department recorded its first intake of undergraduates in the 2011/2012 academic session. It currently has five sets of undergraduates at 100, 200, 300, 400 and 500 levels numbered 197, 113, 110, 56 and 52 respectively, which makes a total of 528 undergraduate students. More than 90% of the students admitted into the Department of Computer and Communications Engineering undergo a one-year pre-degree programme in Faculty of science of this university. A few of them though come in by direct entry into 200 Level of the Department.
   
