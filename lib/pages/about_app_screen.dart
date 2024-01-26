@@ -82,6 +82,8 @@ class AboutAppScreen extends StatelessWidget {
                     ListTile(
                       leading: SvgPicture.asset(
                           "assets/svg/icons8-github.svg",
+                        height: 52,
+                        width: 52,
                       ),
                       title: Text(
                         '@GreatGrant',
