@@ -15,6 +15,7 @@ class AboutAppScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Card(
+              color: Theme.of(context).canvasColor,
               elevation: 4.0,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12.0),
@@ -57,12 +58,12 @@ class AboutAppScreen extends StatelessWidget {
                       leading: SvgPicture.asset(
                         "assets/svg/icons8-linkedin.svg"
                       ),
-                      title: const Text(
+                      title: Text(
                         'Grant Williams',
                         style: TextStyle(
-                            color: Colors.black,
                             fontSize: 20,
-                            fontFamily: "montserrat"
+                            fontFamily: "montserrat",
+                          color: Theme.of(context).textTheme.displaySmall?.color
                         ),
                       ),
                     ),
@@ -70,13 +71,25 @@ class AboutAppScreen extends StatelessWidget {
                       leading: SvgPicture.asset(
                           "assets/svg/icons8-twitterx.svg",
                       ),
-                      title: const Text('@iAmGreatGrant'),
+                      title: Text(
+                          '@iAmGreatGrant',
+                        style: TextStyle(
+                          color: Theme.of(context).textTheme.displaySmall?.color,
+                          fontFamily: "montserrat",
+                        ),
+                      ),
                     ),
                     ListTile(
                       leading: SvgPicture.asset(
-                          "assets/svg/icons8-github-48.svg"
+                          "assets/svg/icons8-github.svg",
                       ),
-                      title: const Text('@GreatGrant'), // Twitter handle
+                      title: Text(
+                        '@GreatGrant',
+                        style: TextStyle(
+                          fontFamily: "montserrat",
+                          color: Theme.of(context).textTheme.displaySmall?.color,
+                        ),
+                      ), // Twitter handle
                     ),
                   ],
                 ),
