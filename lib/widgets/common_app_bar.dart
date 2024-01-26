@@ -1,3 +1,4 @@
+import 'package:dcce_handbook/pages/about_app_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../util/theme_provider.dart';
@@ -71,12 +72,19 @@ class CommonAppBarState extends State<CommonAppBar>
         ),
         PopupMenuButton(
           color: Theme.of(context).canvasColor,
+
           onSelected: (value) {
-            // Todo() handle click
+            if (value == 'about') {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const AboutAppScreen()),
+              );
+            }
           },
           itemBuilder: (BuildContext context) {
             return [
               PopupMenuItem(
+                value: "about",
                 child: Text(
                   "About",
                   style: TextStyle(

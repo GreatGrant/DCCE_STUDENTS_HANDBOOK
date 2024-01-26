@@ -18,7 +18,7 @@ Widget buildGridItem(Level level) {
               style: const TextStyle(
                   color: Color.fromARGB(255, 38, 48, 145),
                   fontFamily: "montserrat",
-                  fontSize: 14,
+                  fontSize: 16,
                   fontWeight: FontWeight.bold
               ),
             ),
