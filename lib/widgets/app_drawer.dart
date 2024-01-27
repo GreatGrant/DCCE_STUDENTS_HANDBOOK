@@ -41,63 +41,52 @@ class _AppDrawerState extends State<AppDrawer> {
       _drawerSelection = currentDrawerSelection;
     });
 
+    Widget destinationScreen;
+    String title;
 
-    // Navigate to the selected screen
+    // Determine the destination screen and title based on the selected drawer item
     switch (currentDrawerSelection) {
       case DrawerSelection.home:
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (context) => const HomePage(title: "Home")),
-        );
+        destinationScreen = const HomePage(title: "Home");
+        title = "Home";
         break;
       case DrawerSelection.history:
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (context) => const HistoryScreen(title: "History")),
-        );
+        destinationScreen = const HistoryScreen(title: "History");
+        title = "History";
         break;
       case DrawerSelection.philosophy:
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (context) => const PhilosophyScreen(title: "Philosophy")),
-        );
+        destinationScreen = const PhilosophyScreen(title: "Philosophy");
         break;
       case DrawerSelection.exam_guidelines:
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (context) => const ExamGuidelinesScreen(title: "Exam Guidelines")),
-        );
+        destinationScreen = const ExamGuidelinesScreen(title: "Exam Guide");
         break;
       case DrawerSelection.academic_regulation:
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (context) => const AcademicRegulationsScreen(title: "Academic Regulation")),
-        );
+        destinationScreen = const AcademicRegulationsScreen(title: "Academic Regulation");
         break;
       case DrawerSelection.admission_req:
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (context) => const AdmissionRequirementsScreen(title: "Admission Requirements")),
-        );
+        destinationScreen = const AdmissionRequirementsScreen(title: "Admission Requirements");
         break;
       case DrawerSelection.course_duration:
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (context) => const CourseDurationScreen(title: "Course Duration")),
-        );
+        destinationScreen = const CourseDurationScreen(title: "Course Duration");
         break;
       case DrawerSelection.grading:
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (context) => const GradingScreen(title: "Admission Requirements")),
-        );
+        destinationScreen = const GradingScreen(title: "Grading");
         break;
       default:
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (context) => const StaffScreen(title: "Staff")),
-        );
+        destinationScreen = const StaffScreen(title: "Staff");
+        title = "Staff";
     }
+
+    // Navigate to the selected screen with a fade transition animation
+    Navigator.pushReplacement(
+      context,
+      PageRouteBuilder(
+        pageBuilder: (context, animation, secondaryAnimation) => destinationScreen,
+        transitionsBuilder: (context, animation, secondaryAnimation, child) {
+          return FadeTransition(opacity: animation, child: child);
+        },
+      ),
+    );
 
     // Clear the backstack when navigating to a new screen
     Navigator.popUntil(context, (route) => route.isFirst);
