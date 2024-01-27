@@ -4,7 +4,7 @@ import '../../widgets/course_contents.dart';
 import '../../widgets/course_header.dart';
 
 class FourthYearSecondSemester extends StatefulWidget {
-  const FourthYearSecondSemester({Key? key, required this.title}) : super(key: key);
+  const FourthYearSecondSemester({super.key, required this.title});
 
   final String title;
 

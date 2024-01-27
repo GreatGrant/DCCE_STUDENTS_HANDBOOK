@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import '../../util/strings.dart';
 import '../../widgets/common_app_bar.dart';
@@ -43,16 +44,14 @@ class CurriculumScreenState extends State<CurriculumScreen> {
               children: [
                 Text(
                   "THE CURRICULUM:",
-                  style: Theme.of(context).textTheme.headlineLarge?.copyWith(
-                    fontFamily: "montserrat",
+                  style: GoogleFonts.montserrat(
+                      textStyle:  Theme.of(context).textTheme.headlineLarge
                   ),
                 ),
-                const Text(
+                Text(
                   "Curriculum of the Department, which clearly indicates the course codes, course titles, course units, and structures, as given by the Minimum Academic Standard of the National Universities Commission (NUC-MAS).",
                   textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontFamily: "montserrat",
-                  ),
+                  style:  GoogleFonts.montserrat(),
                 ),
                 Expanded(
                     child: WebViewWidget(controller: webViewController)

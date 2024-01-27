@@ -77,17 +77,17 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  fonts:
-     - family: montserrat
-       fonts:
-         - asset: assets/fonts/montserrat_light.ttf
-         - asset: assets/fonts/montserrat_regular.ttf
-         - asset: assets/fonts/montserrat_semibold.ttf
-           weight: 700
-     - family: sarabun
-       fonts:
-         - asset: assets/fonts/sarabun_regular.ttf
-           weight: 700
+#  fonts:
+#     - family: montserrat
+#       fonts:
+#         - asset: assets/fonts/montserrat_light.ttf
+#         - asset: assets/fonts/montserrat_regular.ttf
+#         - asset: assets/fonts/montserrat_semibold.ttf
+#           weight: 700
+#     - family: sarabun
+#       fonts:
+#         - asset: assets/fonts/sarabun_regular.ttf
+#           weight: 700
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

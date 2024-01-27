@@ -55,8 +55,6 @@ class FinalYearSecondSemesterState extends State<FinalYearSecondSemester> {
                 content:
                 'Introduction to Software Engineering; basic concepts, Principles of software engineering. Software life cycle. Project management. Computer based system engineering. Requirements and Specification: Analysis, definition, specification, software prototyping, formal specification, algebraic specification and model-based specification. Software Design: Architectural design. Object-oriented design. Function-oriented design. Real-time system design. User interface design. Dependable Systems. Reliability and reusability. Safety-critical consideration. Good programming practice. Computer-aided Software Engineering (CASE). Verification and Validation: Validation and testing. Problems of assessing and quantifying the system reliability. Test case and test data design. Management: People and organization issues. Cost estimation. Quality management. Process improvement. Maintenance, configuration and re-engineering of software.',
               ),
-              // ... Repeat similar structures for other courses and content
-
               const CourseHeader('CCE529: EMBEDDED SYSTEM DESIGN (3 UNITS)'),
               const CourseContent(
                 title: '',
@@ -74,8 +72,6 @@ class FinalYearSecondSemesterState extends State<FinalYearSecondSemester> {
                 content:
                 'This course contains a description of some of the current and emerging technologies in various areas of telecommunication. They include; 4G systems and Beyond, Smart grid, Green Communication, Radio Resource and Interference Management, Mobile Cloud, Vehicular Networks, Internet of Things (IoT). 4G systems and Beyond: HSPA, HSPA+, LTE-Advanced, Specifications for 4G systems, emerging 5G. Smart Grid: Definition, Applications and benefits, Standards and Smart grid projects. Green Communication: Heterogeneous networks, Base station Relaying, Cell Zooming, Cell switching, Energy-efficient power amplifier techniques, Management of Physical layer using Multiple-in-Multiple-out (MIMO), Cognitive radio Radio resource and interference management: Concept, Algorithm; Hand off, Power Control, Admission Control, Load control and Packet Scheduling. Mobile Cloud: Definition, Architecture, Requirements, Applications and Challenges of mobile cloud. Vehicular Networks: Communications in Vehicular Network, Current Trends in Vehicular Ad Hoc Networks, Architecture, Characteristics and Challenges. Internet of Things: Definition, State of Art, Challenges of IoT and Future of IoT.',
               ),
-              // ... Repeat similar structures for other courses and content
-
               const CourseHeader('CCE528: COMMUNICATION SYSTEMS PLANNING (2 UNITS)'),
               const CourseContent(
                 title: '',

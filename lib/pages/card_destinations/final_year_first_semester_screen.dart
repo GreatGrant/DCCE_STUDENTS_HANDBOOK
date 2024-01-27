@@ -1,7 +1,6 @@
 import 'package:dcce_handbook/util/strings.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
-
 import '../../widgets/course_contents.dart';
 import '../../widgets/course_header.dart';
 
@@ -56,7 +55,6 @@ class FinalYearFirstSemesterState extends State<FinalYearFirstSemester> {
                 content:
                 'General machine structure: program counters and instruction registers. Machine Language and Assembly Language. Instruction formats and types of instructions, including operation codes, index and address registers, Addressing techniques; the use of unconomics to represent operation codes in Assembly Language. Symbolic Labels and the functions of the symbol Tables. The functions of the passes of a 2-pass Assembler. Macros: Definition and use, in relation to open sub-routine. Loaders: Absolute and Relocatable loaders. Compilers design.',
               ),
-              // ... Repeat similar structures for other courses and content
               const CourseContent(
                 title: '',
                 content: 'A laboratory designed to illustrate topics covered in EE 508.',

@@ -54,6 +54,5 @@ class FirstYearScreenState extends State<FirstYearScreen>
   void dispose() {
     super.dispose();
     _tabController.dispose();
-
   }
 }

@@ -34,9 +34,6 @@ class FirstYearSecondSemesterState extends State<FirstYearSecondSemester>{
     _onLoadFlutterAsset(webViewController);
   }
 
-
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

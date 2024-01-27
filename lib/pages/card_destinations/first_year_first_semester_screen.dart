@@ -107,7 +107,6 @@ Frictional forces, static and dynamic friction and their experimental determinat
                 title: 'Kinematics:',
                 content:'Speed, velocity and acceleration; equations of motion for bodies moving with uniform acceleration, motion with variable acceleration; displacement-time and velocity-time graphs, free fall due to gravity and vertical projection, projectile motion in two dimensions and trajectory.',
               ),
-
               const CourseContent(
                   title: 'Dynamics of particles:',
                   content:'''Forces and linear motion, Newton’s laws of motion and applications, inertia, mass and momentum, weight of an object, impulse of a force.
@@ -163,7 +162,6 @@ Energy: kinetic energy, potential energy, gravitational and elastic potential en
                 title:'',
                 content:' A laboratory course covering basic experiments illustrative of the first semester 100 level physics syllabus.',
               ),
-
               const CourseHeader('CHM 111: FOUNDATION CHEMISTRY I (3 UNITS)'),
               const CourseContent(
                 title:'Physical Quantities and Units:',
@@ -181,13 +179,11 @@ Energy: kinetic energy, potential energy, gravitational and elastic potential en
                 title:'Chemical Bonding:',
                 content: 'Dependence of properties of solids, liquids and gases on the type of chemical bonding; Electrovalent bond between ions; Covalent bonds; The shape of simple molecules including CO2 (linear), CH4 (tetrahedral), NH3 (pyramidal), H2O (non – linear), SO3 (trigonal), SF6 (octahedral); Metallic bonds; Intermolecular bonds; Hydrogen bonding and its influence on properties.',
               ),
-
               const CourseHeader('GNS 111: USE OF ENGLISH I(2 UNITS)'),
               const CourseContent(
                 title:'Grammar:',
                 content: 'Type of sentences and sentence structure; Concord – treatment of types of common faults; Violations of unit, inclusion of irrelevant details, Illogical association of ideas etc; Punctuation. Note-taking; principles of note-taking, note-taking practices; Practice procedure; Application of the procedure. Changes required in indirect speech.',
               ),
-
               const CourseHeader('GNS 211: LIBRARY AND INFORMATION SCIENCE (2 UNITS)'),
               const CourseContent(
                   content: '''National planning and development, information for international understanding and cooperation – economic, cultural, political, scientific and technological; Types of Libraries according to organization, materials, services and users; Private and public, public and communal, academic, special and national; Acquisition of materials (for acquisition of knowledge); Types of materials – books, serials, maps, documents, non-books – audio-visuals, archival materials etc.
