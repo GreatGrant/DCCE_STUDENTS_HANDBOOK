@@ -5,6 +5,7 @@ import 'package:dcce_handbook/widgets/course_contents.dart';
 import 'package:dcce_handbook/widgets/course_header.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../util/strings.dart';
 import '../widgets/app_drawer.dart';
@@ -20,8 +21,8 @@ class StaffScreen extends StatelessWidget {
     return Scaffold(
       appBar: CommonAppBar(title: title),
       drawer: const AppDrawer(initialSelection: DrawerSelection.staff),
-      body: const Padding(
-        padding: EdgeInsets.all(8.0),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -29,9 +30,9 @@ class StaffScreen extends StatelessWidget {
             children: [
               Text(
                 "OVERALL MANAGEMENT OF THE DEPARTMENT",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, fontFamily: "montserrat"),
+                style:  GoogleFonts.montserrat(fontSize: 18, fontWeight: FontWeight.bold),
               ),
-              CommonDropCapLayout(paragraph: AppStrings.staffCourseContent)
+              const CommonDropCapLayout(paragraph: AppStrings.staffCourseContent)
             ],
           ),
         ),

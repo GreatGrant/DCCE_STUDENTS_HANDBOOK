@@ -1,6 +1,7 @@
 import 'package:dcce_handbook/util/DrawerSelection.dart';
 import 'package:dcce_handbook/util/strings.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import '../widgets/app_drawer.dart';
 import '../widgets/common_app_bar.dart';
@@ -53,11 +54,11 @@ class GradingScreenState extends State<GradingScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Padding(
-                padding: EdgeInsets.all(16.0),
+              Padding(
+                padding: const EdgeInsets.all(16.0),
                 child: Text(
                   AppStrings.gradingParagraphString,
-                  style: TextStyle(fontSize: 16, fontFamily: "montserrat"),
+                  style:  GoogleFonts.montserrat(fontSize: 16),
                 ),
               ),
               const SizedBox(height: 16),
