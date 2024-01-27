@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../widgets/common_app_bar.dart';
 
 class AboutAppScreen extends StatelessWidget {
@@ -87,10 +88,8 @@ class AboutAppScreen extends StatelessWidget {
                       ),
                       title: Text(
                         '@GreatGrant',
-                        style: TextStyle(
-                          fontFamily: "montserrat",
-                          color: Theme.of(context).textTheme.displaySmall?.color,
-                        ),
+                        style: GoogleFonts.montserrat(
+                            color: Theme.of(context).textTheme.displaySmall?.color),
                       ), // Twitter handle
                     ),
                   ],
@@ -104,12 +103,12 @@ class AboutAppScreen extends StatelessWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12.0),
               ),
-              child: const Padding(
-                padding: EdgeInsets.all(16.0),
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text(
+                    const Text(
                       'Version',
                       style: TextStyle(
                         fontSize: 20.0,
@@ -117,10 +116,10 @@ class AboutAppScreen extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(height: 8.0),
+                    const SizedBox(height: 8.0),
                     Text(
                       '1.0.0', // Replace with your app's version
-                      style: TextStyle(fontSize: 16.0, fontFamily: "montserrat"),
+                      style: GoogleFonts.montserrat(fontSize: 16.0)
                     ),
                   ],
                 ),

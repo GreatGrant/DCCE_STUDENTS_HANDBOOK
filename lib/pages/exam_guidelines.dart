@@ -2,6 +2,7 @@ import 'package:dcce_handbook/util/DrawerSelection.dart';
 import 'package:dcce_handbook/util/strings.dart';
 import 'package:drop_cap_text/drop_cap_text.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../widgets/app_drawer.dart';
 import '../widgets/build_header.dart';
 import '../widgets/common_app_bar.dart';
@@ -30,12 +31,10 @@ class ExamGuidelinesScreen extends StatelessWidget {
             children: [
               buildHeading("STANDARD OF TESTS AND EXAMINATIONS:"),
              DropCapText(AppStrings.examGuideString,
-             dropCapStyle: const TextStyle(
-               fontFamily: "montserrat",
-               color: Color.fromARGB(255, 38, 48, 145),
+             dropCapStyle: GoogleFonts.merriweather(
+               color: const Color.fromARGB(255, 38, 48, 145),
              ),
-             style: const TextStyle(
-                 fontFamily: "montserrat",
+             style: GoogleFonts.montserrat(
                  fontSize: 16
              ),
              ),
@@ -139,9 +138,8 @@ Widget buildUnorderedListItem(BuildContext context, String text, {bool isPenalty
       children: [
         Text(
           '◦',
-          style: TextStyle(
+          style: GoogleFonts.montserrat(
             fontSize: 16,
-            fontFamily: "montserrat",
             color: isPenalty ? Colors.red : Theme.of(context).textTheme.displaySmall?.color,
           ),
         ),
@@ -149,9 +147,8 @@ Widget buildUnorderedListItem(BuildContext context, String text, {bool isPenalty
         Expanded(
           child: Text(
             text,
-            style: TextStyle(
+            style: GoogleFonts.montserrat(
               fontSize: 16,
-              fontFamily: "montserrat",
               color: isPenalty ? Colors.red : Theme.of(context).textTheme.displaySmall?.color,
             ),
           ),

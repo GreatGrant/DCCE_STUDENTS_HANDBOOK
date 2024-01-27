@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 Widget buildParagraph(BuildContext context, String text, {bool isPenalty = false}) {
   return Padding(
@@ -9,9 +10,8 @@ Widget buildParagraph(BuildContext context, String text, {bool isPenalty = false
         Expanded(
           child: Text(
             text,
-            style: TextStyle(
+            style: GoogleFonts.montserrat(
               fontSize: 16,
-              fontFamily: "montserrat",
               color: isPenalty ? Colors.red : Theme.of(context).textTheme.displaySmall?.color,
             ),
           ),
