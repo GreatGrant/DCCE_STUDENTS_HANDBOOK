@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CourseContent extends StatelessWidget {
   final String title;
@@ -17,8 +18,7 @@ class CourseContent extends StatelessWidget {
             visible: title.isNotEmpty,
             child: Text(
               title,
-              style: const TextStyle(
-                fontFamily: "montserrat",
+              style: GoogleFonts.montserrat(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
               ),
@@ -26,9 +26,7 @@ class CourseContent extends StatelessWidget {
           ),
           Text(
               content,
-            style: const TextStyle(
-                fontFamily: "montserrat"
-            ),
+            style:  GoogleFonts.montserrat(),
           ),
         ],
       ),

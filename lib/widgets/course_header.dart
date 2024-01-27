@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CourseHeader extends StatelessWidget {
   final String title;
@@ -19,12 +19,11 @@ class CourseHeader extends StatelessWidget {
         child: Text(
           title,
           textAlign: TextAlign.center,
-          style: const TextStyle(
+          style:  GoogleFonts.montserrat(
             color: Colors.white,
             fontSize: 20,
             fontWeight: FontWeight.bold,
-            backgroundColor: Color.fromARGB(255, 38, 48, 145),
-            fontFamily: "montserrat"
+            backgroundColor: const Color.fromARGB(255, 38, 48, 145),
           ),
         ),
       ),

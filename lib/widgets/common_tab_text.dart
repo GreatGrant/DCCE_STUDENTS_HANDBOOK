@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CommonTabText extends StatelessWidget {
   const CommonTabText({
@@ -12,8 +13,7 @@ class CommonTabText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: const TextStyle(
-        fontFamily: "montserrat",
+      style: GoogleFonts.montserrat(
         fontWeight: FontWeight.bold,
       ),
     );

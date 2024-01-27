@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../models/level.dart';
 
 Widget buildGridItem(Level level) {
@@ -15,9 +16,8 @@ Widget buildGridItem(Level level) {
           children: [
             Text(
               level.level,
-              style: const TextStyle(
-                  color: Color.fromARGB(255, 38, 48, 145),
-                  fontFamily: "montserrat",
+              style:  GoogleFonts.montserrat(
+                  color: const Color.fromARGB(255, 38, 48, 145),
                   fontSize: 16,
                   fontWeight: FontWeight.bold
               ),

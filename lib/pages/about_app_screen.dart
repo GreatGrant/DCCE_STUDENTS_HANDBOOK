@@ -21,14 +21,14 @@ class AboutAppScreen extends StatelessWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12.0),
               ),
-              child: const Padding(
-                padding: EdgeInsets.all(16.0),
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
                       'A digital version of the Department Of Computer And Communication Engineering Handbook, Abubakar Tafawa Balewa University, Bauchi',
-                      style: TextStyle(fontSize: 16.0, fontFamily: "montserrat"),
+                      style: GoogleFonts.montserrat(fontSize: 16.0),
                     ),
                   ],
                 ),
@@ -46,11 +46,10 @@ class AboutAppScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    const Text(
+                    Text(
                       'Developer',
-                      style: TextStyle(
+                      style: GoogleFonts.montserrat(
                         fontSize: 20.0,
-                        fontFamily: "montserrat",
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -61,11 +60,9 @@ class AboutAppScreen extends StatelessWidget {
                       ),
                       title: Text(
                         'Grant Williams',
-                        style: TextStyle(
+                        style: GoogleFonts.montserrat(
                             fontSize: 20,
-                            fontFamily: "montserrat",
-                          color: Theme.of(context).textTheme.displaySmall?.color
-                        ),
+                            color: Theme.of(context).textTheme.displaySmall?.color)
                       ),
                     ),
                     ListTile(
@@ -74,10 +71,7 @@ class AboutAppScreen extends StatelessWidget {
                       ),
                       title: Text(
                           '@iAmGreatGrant',
-                        style: TextStyle(
-                          color: Theme.of(context).textTheme.displaySmall?.color,
-                          fontFamily: "montserrat",
-                        ),
+                        style: GoogleFonts.montserrat(color: Theme.of(context).textTheme.displaySmall?.color)
                       ),
                     ),
                     ListTile(
@@ -108,11 +102,10 @@ class AboutAppScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    const Text(
+                    Text(
                       'Version',
-                      style: TextStyle(
+                      style: GoogleFonts.montserrat(
                         fontSize: 20.0,
-                        fontFamily: "montserrat",
                         fontWeight: FontWeight.bold,
                       ),
                     ),

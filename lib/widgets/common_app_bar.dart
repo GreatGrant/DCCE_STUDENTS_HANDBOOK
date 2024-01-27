@@ -1,5 +1,6 @@
 import 'package:dcce_handbook/pages/about_app_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import '../util/theme_provider.dart';
 
@@ -53,9 +54,8 @@ class CommonAppBarState extends State<CommonAppBar>
       backgroundColor: Theme.of(context).canvasColor,
       title: Text(
         widget.title,
-        style: TextStyle(
+        style: GoogleFonts.montserrat(
           color: Theme.of(context).textTheme.displaySmall?.color,
-          fontFamily: "montserrat",
           fontWeight: FontWeight.bold,
         ),
       ),
@@ -87,7 +87,7 @@ class CommonAppBarState extends State<CommonAppBar>
                 value: "about",
                 child: Text(
                   "About",
-                  style: TextStyle(
+                  style: GoogleFonts.montserrat(
                     color: Theme.of(context).textTheme.displaySmall?.color,
                   ),
                 ),

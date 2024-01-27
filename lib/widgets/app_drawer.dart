@@ -9,6 +9,7 @@ import 'package:dcce_handbook/pages/philosophy.dart';
 import 'package:dcce_handbook/pages/staff.dart';
 import 'package:dcce_handbook/util/DrawerSelection.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'list_tile_icon.dart';
 import 'list_tile_text.dart';
 
@@ -123,11 +124,9 @@ class _AppDrawerState extends State<AppDrawer> {
                     height: 100,
                     width: 100,
                   ),
-                  const Text(
+                  Text(
                     "DCCE Student Handbook",
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontFamily: "montserrat"),
+                    style: GoogleFonts.montserrat(fontSize: 20),
                   ),
                 ],
               ),
