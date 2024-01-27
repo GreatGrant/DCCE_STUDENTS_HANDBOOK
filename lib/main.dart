@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
               canvasColor: Colors.grey[900]
             ),
             themeMode: themeProvider.themeMode, // Get theme mode from provider
-            home: isOnboarded ? const HomePage(title: "DCCE Handbook") : const OnboardingView()
+            home: isOnboarded ? const HomePage(title: "Home") : const OnboardingView()
           );
         },
       ),

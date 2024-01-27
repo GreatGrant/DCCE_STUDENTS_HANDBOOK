@@ -56,7 +56,6 @@ class CommonAppBarState extends State<CommonAppBar>
         widget.title,
         style: GoogleFonts.montserrat(
           color: Theme.of(context).textTheme.displaySmall?.color,
-          fontWeight: FontWeight.bold,
         ),
       ),
       centerTitle: false,
