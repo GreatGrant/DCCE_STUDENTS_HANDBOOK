@@ -1,6 +1,8 @@
 import 'package:dcce_handbook/util/strings.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
+import '../../util/check_color.dart';
+import '../../util/webview_utils.dart';
 import '../../widgets/course_contents.dart';
 import '../../widgets/course_header.dart';
 
@@ -30,7 +32,8 @@ class ThirdYearSecondSemesterState extends State<ThirdYearSecondSemester> {
     backgroundColor = getBackgroundColor(context);
 
     // Load the HTML string and set the background color after the web page has finished loading
-    _onLoadFlutterAsset(webViewController);
+    _onLoadHtmlContent(webViewController, context);
+
   }
 
   @override
@@ -212,43 +215,14 @@ Some of the ventures to be focused upon include the following:
   }
 
 
-  Future<void> _onLoadFlutterAsset(
-      WebViewController controller) async {
-    await controller.loadHtmlString(AppStrings.thirdYearSecondSemesterTable);
 
-    // Set the background color after the web page has finished loading
-    controller.clearCache(); // Clear cache to ensure styles are applied
-    controller.setBackgroundColor(backgroundColor);
-    controller.setJavaScriptMode(JavaScriptMode.unrestricted);
-    if (isColorDark(backgroundColor)) {
-      controller.runJavaScript('''
-    document.body.style.color = "white";
-    var tableHeaders = document.querySelectorAll('th');
-    for (var i = 0; i < tableHeaders.length; i++) {
-      tableHeaders[i].style.color = "#ffffff";
-    }  
-    ''');
-    } else {
-      controller.runJavaScript(
-          ''' var tableHeaders = document.querySelectorAll('th');
-          for (var i = 0; i < tableHeaders.length; i++) {
-           tableHeaders[i].style.color = "#ffffff";
-            }
-    '''
-      );
-    }
-  }
-
-  bool isColorDark(Color color) {
-    // Calculate the luminance of the color
-    final luminance = color.computeLuminance();
-
-    // Check if the luminance is below a certain threshold
-    return luminance < 0.5;
-  }
-
-  Color getBackgroundColor(BuildContext context) {
-    return Theme.of(context).canvasColor;
+  Future<void> _onLoadHtmlContent(WebViewController controller, BuildContext context) async {
+    await WebViewUtils.loadHtmlContent(
+      controller: controller,
+      htmlContent: AppStrings.thirdYearSecondSemesterTable,
+      backgroundColor: Theme.of(context).canvasColor,
+      isColorDark: isColorDark(Theme.of(context).canvasColor),
+    );
   }
 }
 
