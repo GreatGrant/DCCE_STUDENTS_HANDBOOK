@@ -4,7 +4,17 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import '../util/theme_provider.dart';
 
+/// A customizable app bar commonly used across the app.
+///
+/// This app bar provides a consistent look and feel for the app's screens.
 class CommonAppBar extends StatefulWidget implements PreferredSizeWidget {
+  /// Constructs a [CommonAppBar] with the specified [title], [tabs], and [tabController].
+  ///
+  /// The [title] parameter is required and specifies the title displayed in the app bar.
+  ///
+  /// The [tabs] parameter is optional and specifies the list of widgets representing tabs.
+  ///
+  /// The [tabController] parameter is optional and provides a [TabController] for controlling tab selection.
   const CommonAppBar({
     super.key,
     required this.title,
@@ -12,8 +22,13 @@ class CommonAppBar extends StatefulWidget implements PreferredSizeWidget {
     this.tabController,
   });
 
+  /// The title displayed in the app bar.
   final String title;
+
+  /// The list of widgets representing tabs.
   final List<Widget>? tabs;
+
+  /// The tab controller for controlling tab selection.
   final TabController? tabController;
 
   @override

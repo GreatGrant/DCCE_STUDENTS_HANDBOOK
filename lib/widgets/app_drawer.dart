@@ -13,7 +13,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'list_tile_icon.dart';
 import 'list_tile_text.dart';
 
-/// A custom drawer widget for the DCCE Student Handbook app.
+/// A custom drawer widget for the app.
 ///
 /// This widget displays a drawer that provides navigation options to different
 /// sections of the DCCE Student Handbook app. It includes options to navigate
