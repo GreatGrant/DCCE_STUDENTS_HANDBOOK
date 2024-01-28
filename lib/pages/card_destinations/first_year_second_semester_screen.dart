@@ -33,7 +33,7 @@ class FirstYearSecondSemesterState extends State<FirstYearSecondSemester>{
     backgroundColor = getBackgroundColor(context);
 
     // Load the HTML string and set the background color after the web page has finished loading
-    _onLoadHtmlContent(webViewController);
+    _onLoadHtmlContent(webViewController, context);
   }
 
   @override
