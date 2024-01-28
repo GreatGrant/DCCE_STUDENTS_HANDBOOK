@@ -3,6 +3,11 @@ import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../models/level.dart';
 
+/// Builds a grid item widget for displaying information about a [Level].
+///
+/// The [buildGridItem] function takes a [Level] object as input and returns
+/// a widget that represents a grid item. Each grid item consists of a card
+/// containing the level name and an SVG image associated with the level.
 Widget buildGridItem(Level level) {
   return SizedBox(
     width: 100,
