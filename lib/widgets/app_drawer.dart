@@ -27,6 +27,11 @@ class AppDrawer extends StatefulWidget {
   /// when the drawer is first displayed. It should be one of the values from
   /// the [DrawerSelection] enum.
   final DrawerSelection initialSelection;
+  /// Constructs a new [AppDrawer] with the specified initial selection.
+  ///
+  /// The [initialSelection] parameter determines the initial selection for the
+  /// drawer when it is first displayed. It should be one of the values from
+  /// the [DrawerSelection] enum.
   const AppDrawer({super.key, required this.initialSelection});
 
   @override
