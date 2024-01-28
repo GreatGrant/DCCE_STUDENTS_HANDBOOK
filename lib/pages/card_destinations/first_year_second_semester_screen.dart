@@ -209,7 +209,7 @@ class FirstYearSecondSemesterState extends State<FirstYearSecondSemester>{
   Future<void> _onLoadHtmlContent(WebViewController controller, BuildContext context) async {
     await WebViewUtils.loadHtmlContent(
       controller: controller,
-      htmlContent: AppStrings.finalYearSecondSemester,
+      htmlContent: AppStrings.firstYearSecondSemesterTable,
       backgroundColor: Theme.of(context).canvasColor,
       isColorDark: isColorDark(Theme.of(context).canvasColor),
     );

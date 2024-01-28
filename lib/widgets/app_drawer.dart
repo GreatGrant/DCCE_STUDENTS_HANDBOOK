@@ -13,7 +13,19 @@ import 'package:google_fonts/google_fonts.dart';
 import 'list_tile_icon.dart';
 import 'list_tile_text.dart';
 
+/// A custom drawer widget for the DCCE Student Handbook app.
+///
+/// This widget displays a drawer that provides navigation options to different
+/// sections of the DCCE Student Handbook app. It includes options to navigate
+/// to the home screen, history, academic regulations, course duration, exam guidelines,
+/// grading, philosophy, staff and management pages.
+///
 class AppDrawer extends StatefulWidget {
+  /// The initial selection for the drawer.
+  ///
+  /// This parameter determines which item in the drawer is initially selected
+  /// when the drawer is first displayed. It should be one of the values from
+  /// the [DrawerSelection] enum.
   final DrawerSelection initialSelection;
   const AppDrawer({super.key, required this.initialSelection});
 
