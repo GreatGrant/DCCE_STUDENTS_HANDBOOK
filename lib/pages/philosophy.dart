@@ -1,4 +1,4 @@
-import 'package:dcce_handbook/util/DrawerSelection.dart';
+import 'package:dcce_handbook/util/drawer_selection.dart';
 import 'package:dcce_handbook/util/strings.dart';
 import 'package:dcce_handbook/widgets/common_dropcap_layout.dart';
 import 'package:flutter/material.dart';

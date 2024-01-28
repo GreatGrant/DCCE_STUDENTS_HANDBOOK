@@ -1,7 +1,7 @@
 import 'package:dcce_handbook/util/strings.dart';
 import 'package:dcce_handbook/widgets/common_dropcap_layout.dart';
 import 'package:flutter/material.dart';
-import '../util/DrawerSelection.dart';
+import '../util/drawer_selection.dart';
 import '../widgets/app_drawer.dart';
 import '../widgets/common_app_bar.dart';
 import '../widgets/show_back_dialog.dart';
@@ -21,7 +21,7 @@ class AdmissionRequirementsScreen extends StatelessWidget {
       },
       child: Scaffold(
         appBar: CommonAppBar(title: title),
-          drawer: const AppDrawer(initialSelection: DrawerSelection.admission_req),
+          drawer: const AppDrawer(initialSelection: DrawerSelection.admissionReq),
           body: const CommonDropCapLayout(
           paragraph: AppStrings.admissionRequirement,
         )

@@ -59,7 +59,7 @@ A student shall pass an examination if he/she scores a grade of "E" (1.00 Point)
 
 static const String admissionRequirementHeaderText = "COMPLIANCE WITH ADMISSION REQUIREMENTS:";
 static const String admissionRequirement = '''There are three admission procedures into the Department:
-        - Unified Tertiary Matriculation Examination (UTME): Candidates should possess passes at credit level in senior secondary certificate final year examination or GCE “O” Level in five subjects including English Language, Mathematics, Physics, Chemistry and any other science subject at not more than two sittings. In addition to this the applicant should meet the necessary UTME cut off point.</li>
+        - Unified Tertiary Matriculation Examination (UTME): Candidates should possess passes at credit level in senior secondary certificate final year examination or GCE “O” Level in five subjects including English Language, Mathematics, Physics, Chemistry and any other science subject at not more than two sittings. In addition to this the applicant should meet the necessary UTME cut off point.
         - Direct entry: For direct entry into 200 Level, candidates must have passes in Mathematics and Physics at GCE “A” Level or its equivalent. ND and HND with a minimum of upper credit pass are eligible for admission. Candidates must also meet the “O” Level requirement of five credits.
         - The university operates a remedial programme that prepares candidates for admission such that candidates must pass UTME at cut-off points and also successfully remedy relevant subjects as specified in the UTME and as stipulated by the University for Engineering based courses. 
   '''

@@ -1,4 +1,4 @@
-import 'package:dcce_handbook/util/DrawerSelection.dart';
+import 'package:dcce_handbook/util/drawer_selection.dart';
 import 'package:dcce_handbook/util/strings.dart';
 import 'package:dcce_handbook/widgets/app_drawer.dart';
 import 'package:dcce_handbook/widgets/paragraph.dart';
@@ -23,7 +23,7 @@ class CourseDurationScreen extends StatelessWidget {
       },
       child: Scaffold(
         appBar: CommonAppBar(title: title),
-        drawer: const AppDrawer(initialSelection: DrawerSelection.course_duration),
+        drawer: const AppDrawer(initialSelection: DrawerSelection.courseDuration),
         body: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           padding: const EdgeInsets.all(16),

@@ -1,6 +1,8 @@
 import 'package:dcce_handbook/util/strings.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
+import '../../util/check_color.dart';
+import '../../util/webview_utils.dart';
 import '../../widgets/course_contents.dart';
 import '../../widgets/course_header.dart';
 
@@ -30,7 +32,7 @@ class FinalYearFirstSemesterState extends State<FinalYearFirstSemester> {
     backgroundColor = getBackgroundColor(context);
 
     // Load the HTML string and set the background color after the web page has finished loading
-    _onLoadFlutterAsset(webViewController);
+    _onLoadHtmlContent(webViewController, context);
   }
 
 
@@ -59,7 +61,8 @@ class FinalYearFirstSemesterState extends State<FinalYearFirstSemester> {
                 title: '',
                 content: 'A laboratory designed to illustrate topics covered in EE 508.',
               ),
-              const CourseHeader('CE516: OPTICAL COMMUNICATION SYSTEMS (2 UNITS)'),
+              const CourseHeader(
+                  'CE516: OPTICAL COMMUNICATION SYSTEMS (2 UNITS)'),
               const CourseContent(
                 title: '',
                 content:
@@ -71,7 +74,8 @@ class FinalYearFirstSemesterState extends State<FinalYearFirstSemester> {
                 content:
                 'Brief history and overview of Satellite Communications. Orbital Mechanics. Satellite Subsystems. Satellite Link Design. Modulation & Multiplexing Techniques used in Satcom. Multiple Access Techniques. Error Correction for Digital Satellite Links. Propagation Effects and their Impact on Satellite Links. VSAT Systems. LEOs and Non-Geostationary Satellite Systems. DBS TV and Radio. Satellite Navigation and the Global Positioning System',
               ),
-              const CourseHeader('CE518: WIRELESS AND MOBILE COMMUNICATION (3 UNITS)'),
+              const CourseHeader(
+                  'CE518: WIRELESS AND MOBILE COMMUNICATION (3 UNITS)'),
               const CourseContent(
                 title: '',
                 content:
@@ -83,7 +87,8 @@ class FinalYearFirstSemesterState extends State<FinalYearFirstSemester> {
                 content:
                 'Microwave frequencies and uses; microwave transmission in transmission lines and waveguides, microwave circuits, impedance transformation and matching, passive microwave devices, resonant and filter circuits, active microwave devices; Klystron, and magnetron tubes and semi-conductor devices for microwave generation. Antennae: definitions of elementary parameters related to radiation patterns; dipole and aperture antennae and the related design parameters; introduction to antenna arrays. Radiowave propagation: propagation in the ionosphere, troposphere and in stratified media; principles of scatter propagation; applications in general broadcast, television and satellite communication systems. Radar Systems: Nature of radar and radar equations; composition of a radar system; application of different types of radars.',
               ),
-              const CourseHeader('EE509: MICROWAVE ENGINEERING LABORATORY (1 UNIT)'),
+              const CourseHeader(
+                  'EE509: MICROWAVE ENGINEERING LABORATORY (1 UNIT)'),
               const CourseContent(
                 title: '',
                 content: 'A laboratory on microwave engineering designed to illustrate topics covered in EE 508.',
@@ -91,7 +96,10 @@ class FinalYearFirstSemesterState extends State<FinalYearFirstSemester> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: SizedBox(
-                  height: MediaQuery.of(context).size.height,
+                  height: MediaQuery
+                      .of(context)
+                      .size
+                      .height,
                   child: WebViewWidget(controller: webViewController),
                 ),
               ),
@@ -103,43 +111,17 @@ class FinalYearFirstSemesterState extends State<FinalYearFirstSemester> {
   }
 
 
-  Future<void> _onLoadFlutterAsset(
-      WebViewController controller) async {
-    await controller.loadHtmlString(AppStrings.finalYearFirstSemester);
-
-    // Set the background color after the web page has finished loading
-    controller.clearCache(); // Clear cache to ensure styles are applied
-    controller.setBackgroundColor(backgroundColor);
-    controller.setJavaScriptMode(JavaScriptMode.unrestricted);
-    if (isColorDark(backgroundColor)) {
-      controller.runJavaScript('''
-    document.body.style.color = "white";
-    var tableHeaders = document.querySelectorAll('th');
-    for (var i = 0; i < tableHeaders.length; i++) {
-      tableHeaders[i].style.color = "#ffffff";
-    }  
-    ''');
-    } else {
-      controller.runJavaScript(
-          ''' var tableHeaders = document.querySelectorAll('th');
-          for (var i = 0; i < tableHeaders.length; i++) {
-           tableHeaders[i].style.color = "#ffffff";
-            }
-    '''
-      );
-    }
-  }
-
-  bool isColorDark(Color color) {
-    // Calculate the luminance of the color
-    final luminance = color.computeLuminance();
-
-    // Check if the luminance is below a certain threshold
-    return luminance < 0.5;
-  }
-
-  Color getBackgroundColor(BuildContext context) {
-    return Theme.of(context).canvasColor;
+  Future<void> _onLoadHtmlContent(WebViewController controller,
+      BuildContext context) async {
+    await WebViewUtils.loadHtmlContent(
+      controller: controller,
+      htmlContent: AppStrings.finalYearFirstSemester,
+      backgroundColor: Theme
+          .of(context)
+          .canvasColor,
+      isColorDark: isColorDark(Theme
+          .of(context)
+          .canvasColor),
+    );
   }
 }
-

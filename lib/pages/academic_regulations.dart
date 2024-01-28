@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../util/DrawerSelection.dart';
+import '../util/drawer_selection.dart';
 import '../util/strings.dart';
 import '../widgets/app_drawer.dart';
 import '../widgets/common_app_bar.dart';
@@ -21,7 +21,7 @@ class AcademicRegulationsScreen extends StatelessWidget {
       },
       child: Scaffold(
         appBar: CommonAppBar(title: title,),
-        drawer: const AppDrawer(initialSelection: DrawerSelection.academic_regulation),
+        drawer: const AppDrawer(initialSelection: DrawerSelection.academicRegulation),
         body: const CommonDropCapLayout(paragraph: AppStrings.academicRegulation)
       ),
     );

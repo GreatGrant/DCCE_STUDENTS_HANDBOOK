@@ -1,4 +1,4 @@
-import 'package:dcce_handbook/util/DrawerSelection.dart';
+import 'package:dcce_handbook/util/drawer_selection.dart';
 import 'package:dcce_handbook/util/strings.dart';
 import 'package:drop_cap_text/drop_cap_text.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +24,7 @@ class ExamGuidelinesScreen extends StatelessWidget {
       },
       child: Scaffold(
         appBar: CommonAppBar(title: title),
-        drawer: const AppDrawer(initialSelection: DrawerSelection.exam_guidelines),
+        drawer: const AppDrawer(initialSelection: DrawerSelection.examGuidelines),
         body: Padding(
           padding: const EdgeInsets.all(16.0),
           child: ListView(

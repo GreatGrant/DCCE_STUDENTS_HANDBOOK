@@ -7,7 +7,7 @@ import 'package:dcce_handbook/pages/history.dart';
 import 'package:dcce_handbook/pages/home_page.dart';
 import 'package:dcce_handbook/pages/philosophy.dart';
 import 'package:dcce_handbook/pages/staff.dart';
-import 'package:dcce_handbook/util/DrawerSelection.dart';
+import 'package:dcce_handbook/util/drawer_selection.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'list_tile_icon.dart';
@@ -57,16 +57,16 @@ class _AppDrawerState extends State<AppDrawer> {
       case DrawerSelection.philosophy:
         destinationScreen = const PhilosophyScreen(title: "Philosophy");
         break;
-      case DrawerSelection.exam_guidelines:
+      case DrawerSelection.examGuidelines:
         destinationScreen = const ExamGuidelinesScreen(title: "Exam Guide");
         break;
-      case DrawerSelection.academic_regulation:
+      case DrawerSelection.academicRegulation:
         destinationScreen = const AcademicRegulationsScreen(title: "Academic Regulation");
         break;
-      case DrawerSelection.admission_req:
+      case DrawerSelection.admissionReq:
         destinationScreen = const AdmissionRequirementsScreen(title: "Admission Requirements");
         break;
-      case DrawerSelection.course_duration:
+      case DrawerSelection.courseDuration:
         destinationScreen = const CourseDurationScreen(title: "Course Duration");
         break;
       case DrawerSelection.grading:
@@ -173,57 +173,57 @@ class _AppDrawerState extends State<AppDrawer> {
             leading:ListTileIcon(
                 icon: Icons.menu_book,
                 drawerSelection: _drawerSelection,
-                currentSelection: DrawerSelection.exam_guidelines
+                currentSelection: DrawerSelection.examGuidelines
             ),
             title: ListTileText(
                 text: "Exam Guidelines",
                 drawerSelection: _drawerSelection,
-                currentSelection: DrawerSelection.exam_guidelines
+                currentSelection: DrawerSelection.examGuidelines
             ),
-            selected: _drawerSelection == DrawerSelection.exam_guidelines,
-            selectedTileColor: _drawerSelection == DrawerSelection.exam_guidelines ? Colors.deepPurple.shade100: null,
+            selected: _drawerSelection == DrawerSelection.examGuidelines,
+            selectedTileColor: _drawerSelection == DrawerSelection.examGuidelines ? Colors.deepPurple.shade100: null,
             onTap: (){
-              _setSelectedNavItem(DrawerSelection.exam_guidelines);
+              _setSelectedNavItem(DrawerSelection.examGuidelines);
             },
           ),ListTile(
             leading: ListTileIcon(
                 icon: Icons.safety_check,
                 drawerSelection: _drawerSelection,
-                currentSelection: DrawerSelection.academic_regulation
+                currentSelection: DrawerSelection.academicRegulation
             ),
-            title: ListTileText(text: "Academic Regulation", drawerSelection: _drawerSelection,currentSelection: DrawerSelection.academic_regulation),
-            selected: _drawerSelection == DrawerSelection.academic_regulation,
-            selectedTileColor: _drawerSelection == DrawerSelection.academic_regulation ? Colors.deepPurple.shade100: null,
+            title: ListTileText(text: "Academic Regulation", drawerSelection: _drawerSelection,currentSelection: DrawerSelection.academicRegulation),
+            selected: _drawerSelection == DrawerSelection.academicRegulation,
+            selectedTileColor: _drawerSelection == DrawerSelection.academicRegulation ? Colors.deepPurple.shade100: null,
             onTap: (){
-              _setSelectedNavItem(DrawerSelection.academic_regulation);
+              _setSelectedNavItem(DrawerSelection.academicRegulation);
             },
           ),ListTile(
             leading: ListTileIcon(
                 icon: Icons.settings,
                 drawerSelection: _drawerSelection,
-                currentSelection: DrawerSelection.admission_req),
+                currentSelection: DrawerSelection.admissionReq),
             title: ListTileText(text: "Admission Requirements",
                 drawerSelection: _drawerSelection,
-                currentSelection: DrawerSelection.admission_req),
-            selected: _drawerSelection == DrawerSelection.admission_req,
-            selectedTileColor: _drawerSelection == DrawerSelection.admission_req ? Colors.deepPurple.shade100: null,
+                currentSelection: DrawerSelection.admissionReq),
+            selected: _drawerSelection == DrawerSelection.admissionReq,
+            selectedTileColor: _drawerSelection == DrawerSelection.admissionReq ? Colors.deepPurple.shade100: null,
             onTap: (){
-              _setSelectedNavItem(DrawerSelection.admission_req);
+              _setSelectedNavItem(DrawerSelection.admissionReq);
             },
           ),ListTile(
             leading: ListTileIcon(
                 icon: Icons.access_time,
                 drawerSelection: _drawerSelection,
-                currentSelection: DrawerSelection.academic_regulation),
+                currentSelection: DrawerSelection.academicRegulation),
             title: ListTileText(
                 text: "Course Duration",
                 drawerSelection: _drawerSelection,
-                currentSelection: DrawerSelection.course_duration
+                currentSelection: DrawerSelection.courseDuration
             ),
-            selected: _drawerSelection == DrawerSelection.course_duration,
-            selectedTileColor: _drawerSelection == DrawerSelection.course_duration ? Colors.deepPurple.shade100: null,
+            selected: _drawerSelection == DrawerSelection.courseDuration,
+            selectedTileColor: _drawerSelection == DrawerSelection.courseDuration ? Colors.deepPurple.shade100: null,
             onTap: (){
-              _setSelectedNavItem(DrawerSelection.course_duration);
+              _setSelectedNavItem(DrawerSelection.courseDuration);
             },
           ),
           ListTile(
