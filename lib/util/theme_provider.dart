@@ -10,6 +10,7 @@ class ThemeProvider with ChangeNotifier {
   ///
   /// The [themeMode] parameter specifies the new theme mode to be set.
   void setThemeMode(ThemeMode themeMode){
+
     _themeMode = themeMode;
     notifyListeners();
   }

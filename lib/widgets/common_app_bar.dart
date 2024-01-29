@@ -49,10 +49,17 @@ class CommonAppBarState extends State<CommonAppBar>
 
   late TabController _tabController;
   bool isDarkMode = false;
+  // The Theme controller stores the ThemeProvider instance
+  late ThemeProvider themeProvider;
 
   @override
   void initState() {
     super.initState();
+    themeProvider = Provider.of<ThemeProvider>(context, listen: false);
+
+    // Set isDarkMode based on the current theme mode
+    isDarkMode = themeProvider.themeMode == ThemeMode.dark;
+
     if (widget.tabs != null && widget.tabs!.isNotEmpty) {
       _tabController = widget.tabController ?? TabController(
         length: widget.tabs!.length,
@@ -80,10 +87,12 @@ class CommonAppBarState extends State<CommonAppBar>
           onPressed: () {
             setState(() {
               isDarkMode = !isDarkMode;
-              _toggleTheme(context, isDarkMode);
+              ThemeMode themeMode = isDarkMode ? ThemeMode.dark : ThemeMode.light;
+              Provider.of<ThemeProvider>(context, listen: false).setThemeMode(themeMode);
+              themeProvider.setThemeMode(themeMode);
             });
-          },
-        ),
+          }
+          ),
         PopupMenuButton(
           color: Theme.of(context).canvasColor,
 
@@ -137,9 +146,6 @@ class CommonAppBarState extends State<CommonAppBar>
 
   }
 
-  void _toggleTheme(BuildContext context, bool isDarkMode) {
-    ThemeMode themeMode = isDarkMode ? ThemeMode.dark : ThemeMode.light;
-
-    Provider.of<ThemeProvider>(context, listen: false).setThemeMode(themeMode);
-  }
 }
+
+

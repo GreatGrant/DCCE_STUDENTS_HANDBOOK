@@ -59,8 +59,16 @@ class MyApp extends StatelessWidget {
         // Sets the theme mode based on the user's preference.
         themeMode: Provider.of<ThemeProvider>(context).themeMode,
         // Displays the HomePage if the user is onboarded, otherwise, displays OnboardingView.
-        home: isOnboarded
+        home: Consumer<ThemeProvider>(
+        builder: (context, themeProvider, child) {
+      IconData iconData = themeProvider.themeMode == ThemeMode.dark
+          ? Icons.sunny // Display sun icon for dark mode
+          : Icons.bedtime; // Display moon icon for light mode
+      return isOnboarded
             ? const HomePage(title: "Home")
-            : const OnboardingView());
+            : const OnboardingView();
+        }
+        )
+    );
   }
 }
