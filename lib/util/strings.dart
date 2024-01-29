@@ -1,3 +1,4 @@
+/// A class that holds the strings resources used in various parts of the app
 class AppStrings{
   static const String staffCourseContent = '''The Department of Computer and Communication Engineering, a full academic Department, is headed by a Coordinator who is the Head of Department.
   

@@ -85,12 +85,7 @@ class CommonAppBarState extends State<CommonAppBar>
         IconButton(
           icon: Icon(isDarkMode ? Icons.sunny : Icons.bedtime),
           onPressed: () {
-            setState(() {
-              isDarkMode = !isDarkMode;
-              ThemeMode themeMode = isDarkMode ? ThemeMode.dark : ThemeMode.light;
-              Provider.of<ThemeProvider>(context, listen: false).setThemeMode(themeMode);
-              themeProvider.setThemeMode(themeMode);
-            });
+            _toggleTheme();
           }
           ),
         PopupMenuButton(
@@ -146,6 +141,15 @@ class CommonAppBarState extends State<CommonAppBar>
 
   }
 
+
+  void _toggleTheme() {
+    setState(() {
+      isDarkMode = !isDarkMode;
+      ThemeMode themeMode = isDarkMode ? ThemeMode.dark : ThemeMode.light;
+      Provider.of<ThemeProvider>(context, listen: false).setThemeMode(themeMode);
+      themeProvider.setThemeMode(themeMode);
+    });
+  }
 }
 
 
