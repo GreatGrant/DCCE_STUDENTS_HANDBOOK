@@ -6,43 +6,61 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-void main() async{
+/// The entry point of the application.
+///
+/// The `main` function initializes the application by setting up the necessary
+/// configurations and then runs the app.
+void main() async {
+  // Ensures that Flutter bindings are initialized.
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Retrieves an instance of SharedPreferences to check if the user has completed onboarding.
   final sharedPref = await SharedPreferences.getInstance();
-  final isOnboarded = sharedPref.getBool(sharedPrefKey)??false;
-  runApp(MyApp(isOnboarded: isOnboarded));
+  final isOnboarded = sharedPref.getBool(sharedPrefKey) ?? false;
+
+  // Runs the application, providing the ThemeProvider with the onboarding status.
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => ThemeProvider(),
+      child: MyApp(isOnboarded: isOnboarded),
+    ),
+  );
 }
 
+/// The main application widget.
+///
+/// The [MyApp] widget initializes the MaterialApp and configures the theme mode
+/// based on the user's onboarding status. It displays the HomePage if the user
+/// has completed onboarding, otherwise, it displays the OnboardingView.
 class MyApp extends StatelessWidget {
   final bool isOnboarded;
+
+  /// Constructs a [MyApp] with the specified [isOnboarded] status.
+  ///
+  /// The [isOnboarded] parameter determines whether the user has completed onboarding.
   const MyApp({super.key, required this.isOnboarded});
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => ThemeProvider(),
-      child: Consumer<ThemeProvider>(
-        builder: (context, themeProvider, child) {
-          return MaterialApp(
-            debugShowCheckedModeBanner: false,
-            title: 'DCCE Student Handbook',
-            theme: ThemeData.light(
-              useMaterial3: true,
-            ).copyWith(
-              colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-              canvasColor: Colors.white
-            ),
-            darkTheme: ThemeData.dark(
-              useMaterial3: true,
-            ).copyWith(
-              colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-              canvasColor: Colors.grey[900]
-            ),
-            themeMode: themeProvider.themeMode, // Get theme mode from provider
-            home: isOnboarded ? const HomePage(title: "Home") : const OnboardingView()
-          );
-        },
-      ),
-    );
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'DCCE Student Handbook',
+        // Configures light and dark themes with custom colors.
+        theme: ThemeData.light(
+          useMaterial3: true,
+        ).copyWith(
+            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+            canvasColor: Colors.white),
+        darkTheme: ThemeData.dark(
+          useMaterial3: true,
+        ).copyWith(
+            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+            canvasColor: Colors.grey[900]),
+        // Sets the theme mode based on the user's preference.
+        themeMode: Provider.of<ThemeProvider>(context).themeMode,
+        // Displays the HomePage if the user is onboarded, otherwise, displays OnboardingView.
+        home: isOnboarded
+            ? const HomePage(title: "Home")
+            : const OnboardingView());
   }
 }
