@@ -65,7 +65,7 @@ flutter:
     - assets/svg/
     - assets/images/
     - assets/onboarding_gif/
-    - google_fonts/
+    - assets/google_fonts/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -82,9 +82,9 @@ flutter:
 #  fonts:
 #     - family: montserrat
 #       fonts:
-#         - asset: assets/fonts/montserrat_light.ttf
-#         - asset: assets/fonts/montserrat_regular.ttf
-#         - asset: assets/fonts/montserrat_semibold.ttf
+#         - asset: assets/fonts/Montserrat-Light.ttf
+#         - asset: assets/fonts/Montserrat-Regular.ttf
+#         - asset: assets/fonts/Montserrat-Semibold.ttf
 #           weight: 700
 #     - family: sarabun
 #       fonts:
