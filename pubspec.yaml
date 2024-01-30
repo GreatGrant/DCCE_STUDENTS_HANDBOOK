@@ -65,7 +65,7 @@ flutter:
     - assets/svg/
     - assets/images/
     - assets/onboarding_gif/
-    - assets/google_fonts/
+    - google_fonts/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -2,7 +2,9 @@ import 'package:dcce_handbook/onboarding/onboarding_view.dart';
 import 'package:dcce_handbook/pages/home_page.dart';
 import 'package:dcce_handbook/util/constants.dart';
 import 'package:dcce_handbook/util/theme_provider.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -11,6 +13,13 @@ import 'package:shared_preferences/shared_preferences.dart';
 /// The `main` function initializes the application by setting up the necessary
 /// configurations and then runs the app.
 void main() async {
+
+//adds a license to the LicenseRegistry for the Google Fonts Open Font License (OFL).
+  LicenseRegistry.addLicense(() async* {
+    final license = await rootBundle.loadString('google_fonts/OFL.txt');
+    yield LicenseEntryWithLineBreaks(['google_fonts'], license);
+  });
+
   // Ensures that Flutter bindings are initialized.
   WidgetsFlutterBinding.ensureInitialized();
 
