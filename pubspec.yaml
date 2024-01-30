@@ -65,7 +65,8 @@ flutter:
     - assets/svg/
     - assets/images/
     - assets/onboarding_gif/
-  #   - images/a_dot_ham.jpeg
+    - google_fonts/
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
