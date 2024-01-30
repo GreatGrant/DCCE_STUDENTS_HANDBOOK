@@ -33,13 +33,31 @@ class WebViewUtils {
 
     // Modify styles based on background color darkness
     final headerColor = isColorDark ? "#ffffff" : "#000000";
-    await controller.runJavaScript('''
-      document.body.style.color = "$headerColor";
-      var tableHeaders = document.querySelectorAll('th');
-      for (var i = 0; i < tableHeaders.length; i++) {
-        tableHeaders[i].style.color = "$headerColor";
-      }  
+
+    if (isColorDark) {
+      await controller.runJavaScript('''
+    document.body.style.color = "white";
+    var tableHeaders = document.querySelectorAll('th');
+    for (var i = 0; i < tableHeaders.length; i++) {
+      tableHeaders[i].style.color = "$backgroundColor";
+    }  
     ''');
+    } else {
+      await controller.runJavaScript(
+          ''' var tableHeaders = document.querySelectorAll('th');
+          for (var i = 0; i < tableHeaders.length; i++) {
+           tableHeaders[i].style.color = "$backgroundColor";
+            }
+    '''
+      );
+    }
+    // await controller.runJavaScript('''
+    //   document.body.style.color = "$headerColor";
+    //   var tableHeaders = document.querySelectorAll('th');
+    //   for (var i = 0; i < tableHeaders.length; i++) {
+    //     tableHeaders[i].style.color = "$headerColor";
+    //   }
+    // ''');
   }
 
   /// Determines whether a given color is dark or light.
