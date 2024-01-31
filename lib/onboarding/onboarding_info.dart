@@ -1,8 +1,20 @@
+/// Class representing onboarding information.
 class OnboardingInfo {
-  const OnboardingInfo({required this.title, required this.description, required this.image});
+  /// Creates a new [OnboardingInfo] instance.
+  ///
+  /// The [title], [description], and [image] parameters must not be null.
+  const OnboardingInfo({
+    required this.title,
+    required this.description,
+    required this.image,
+  });
 
+  /// Title of the onboarding information.
   final String title;
-  final String description;
-  final String image;
 
+  /// Description of the onboarding information.
+  final String description;
+
+  /// Image associated with the onboarding information.
+  final String image;
 }

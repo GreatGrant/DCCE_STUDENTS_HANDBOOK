@@ -56,7 +56,7 @@ class GradingScreenState extends State<GradingScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Padding(
-                padding: EdgeInsets.all(16.0),
+                padding: EdgeInsets.all(8.0),
                 child: CommonDropCapLayout(
                   paragraph: AppStrings.gradingParagraphString,
                   )
