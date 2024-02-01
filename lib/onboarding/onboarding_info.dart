@@ -9,6 +9,7 @@ class OnboardingInfo {
     required this.image,
   });
 
+
   /// Title of the onboarding information.
   final String title;
 
