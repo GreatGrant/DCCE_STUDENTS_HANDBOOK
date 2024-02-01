@@ -111,7 +111,7 @@ class AboutAppScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 8.0),
                     Text(
-                      '1.0.0', // Replace with your app's version
+                      '0.0.1', // Replace with your app's version
                       style: GoogleFonts.montserrat(fontSize: 16.0)
                     ),
                   ],
