@@ -12,8 +12,6 @@ Welcome to the Department Of Computer and Communication Engineering Student Hand
 
 ![dcce](https://github.com/GreatGrant/DCCE_STUDENTS_HANDBOOK/assets/62026220/d41ee119-c908-4018-9c31-640a527e17b6)
 
-<img src="https://github.com/GreatGrant/DCCE_STUDENTS_HANDBOOK/assets/62026220/d41ee119-c908-4018-9c31-640a527e17b6" alt="dcce" height="300" width="300">
-
 <!-- 
 ![20240202_145018](https://github.com/GreatGrant/DCCE_STUDENTS_HANDBOOK/assets/62026220/b6a10511-a707-4c46-bec1-8767fc487c17)
 ![Screenshot 1](screenshots/screenshot1.png)
